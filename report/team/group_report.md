@@ -288,29 +288,31 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** |Sinh viên đang trong giai đoạn ôn thi nước rút. |
+| **Quy trình** |Sinh viên upload file bài giảng -> Hệ thống chia chunk và dùng AI sinh câu hỏi dạng MCQ đính kèm trích dẫn (số trang) -> Sinh viên tự làm bài test -> Nếu sai, hệ thống gợi ý trang cần đọc lại (Hint) -> Sinh viên đối chiếu lại slide gốc và xem đáp án hoàn chỉnh. |
+| **Bottleneck** |Tốn quá nhiều thời gian để tự soạn câu hỏi và mất 30 phút tự Ctrl+F dò lại đáp án trong slide gốc do sợ bị sai lệch kiến thức. |
+| **Impact** |Phá vỡ kế hoạch ôn tập, tốn thời gian cho việc rà soát thủ công, gây tâm lý bất an và dễ rơi vào bẫy "hiểu bài giả tạo" nếu chỉ học thuộc lòng đáp án do AI cung cấp. |
+| **Success Metric** (baseline → target, cách đo) |(1) Tổng thời gian có bộ đề 20 câu: từ 45 phút  dưới 3 phút ->(đo từ lúc upload). (2) Thời gian dò lại đáp án nghi ngờ: từ 30 phút -> dưới 5 phút (nhờ có sẵn số trang đính kèm). (3) Tỷ lệ câu hỏi không bịa đặt kiến thức (ảo giác): đạt >95% (đo qua report của sinh viên). |
+| **Boundary** |AI tuyệt đối không được bịa đặt kiến thức ngoài tài liệu cung cấp (Grounding). AI không hiển thị ngay đáp án cuối cùng để chống học vẹt. Sinh viên (HITL) bắt buộc phải tự nhập/chọn đáp án trước khi hệ thống chấm điểm và cung cấp trích dẫn. |
+| **AI intervention point** |Tại bước đọc file bài giảng, tóm tắt ý chính và sáng tạo ra câu hỏi trắc nghiệm MCQ cùng 3 đáp án nhiễu. |
+| **Mức chọn** | Workflow (Cụ thể: RAG workflow kết hợp structured output JSON).|
+| **Rủi ro & người kiểm tra** |Rủi ro lớn nhất là AI bịa kiến thức (báo nhầm - false positive) dẫn đến sinh viên làm sai bài thi thật. Người kiểm tra: Sinh viên tự đối chiếu độ chính xác của câu hỏi thông qua tính năng bắt buộc AI trích dẫn nguồn (số trang) ngay dưới mỗi câu.|
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+|Quy trình |Sinh viên rà soát đề trôi nổi trên mạng và lật mở tài liệu dò đáp án. |Upload file -> AI sinh bộ đề -> Sinh viên làm test -> Gợi ý số trang -> Hiện đáp án. |Đưa giải pháp RAG Workflow vào quy trình để tự động hóa việc sinh đề từ tài liệu chính chủ, khắc phục việc phải đi tìm đề trôi nổi. |
+|Boundary |AI không được bịa đặt. Sinh viên tự đối chiếu bằng trích dẫn. |Thêm quy định: Không hiển thị đáp án ngay, buộc sinh viên tự chọn đáp án trước (HITL) và chỉ cung cấp Hint khi làm sai. |Xử lý phản biện ở phần 5: Chống lại bẫy "hiểu bài giả tạo" (ỷ lại vào đáp án có sẵn của AI thay vì tự suy nghĩ). |
+|Success Metric |Đo lường "thời gian xác minh đáp án giảm xuống ngay lập tức". |Điều chỉnh thành "thời gian dò lại đáp án giảm xuống dưới 5 phút". |Việc xác minh không thể "ngay lập tức" do con người vẫn cần tự đọc lại trích dẫn (HITL). |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 |Độ bám sát nguồn (Grounding) |Nội dung câu hỏi và đáp án đúng được rút trích 100% từ file bài giảng; có đính kèm đúng số trang slide. |AI tự thêm thắt khái niệm/công thức từ dữ liệu huấn luyện bên ngoài mà slide không hề dạy. |
+| 2 |Chất lượng đáp án nhiễu (Distractors) |3 đáp án nhiễu có tính logic, liên quan đến ngữ cảnh bài học, đủ khả năng gây nhầm lẫn để kiểm tra tư duy. |Đáp án nhiễu quá vô lý, ngây ngô (ví dụ: hỏi về thuật toán nhưng đáp án nhiễu là tên món ăn), hoặc trùng lặp hoàn toàn với đáp án đúng. |
+| 3 |Định dạng cấu trúc (Structured Output) |Trả về đúng định dạng JSON chuẩn (gồm Question, Options array, Correct_Answer, Citation_Page) để hệ thống render lên giao diện làm bài. |Thiếu field, sai cấu trúc JSON hoặc trộn lẫn text tự do khiến hệ thống app không thể parse để hiển thị.|
 
 ---
 
