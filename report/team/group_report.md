@@ -35,9 +35,10 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A.Ôn thi & Đánh giá năng lực |#6, #7, #8, #12 |Chuyển đổi tài liệu thụ động (slide, giáo trình) thành câu hỏi/bài test nhắm đúng trọng tâm và điểm yếu kiến thức.|
+| B. Nghiên cứu & Viết học thuật |#9, #10|Giảm tải các thao tác đọc quét tài liệu tham khảo và định dạng trích dẫn thủ công khi làm đồ án tốt nghiệp/báo cáo. |
+| C. Tự động hóa Kỹ thuật & MLOps |#2, #3, #11 |Tự động hóa các bước kỹ thuật lặp lại (ghi log thực nghiệm ML, sinh Release Notes, sinh bộ test chất lượng dữ liệu).|
+| D.Quản trị công việc & Giao tiếp | #1, #4, #5 |Khớp nối, tóm tắt và đối chiếu thông tin để tránh sót việc (khớp CV với JD, biên bản họp/action items, theo dõi deadline).|
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
