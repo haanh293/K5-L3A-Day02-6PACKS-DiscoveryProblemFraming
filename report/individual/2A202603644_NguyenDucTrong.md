@@ -146,16 +146,16 @@ Tìm JD -> Đọc JD, xác định kỹ năng -> Đối chiếu với CV -> Sử
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Đưa ra 2 candidate: #11 (Sinh bộ test data tự động/dbt) và #12 (Soạn đề và chấm bài cho học sinh kèm). | Đóng góp góc nhìn từ cả chuyên môn dữ liệu (Data/Analytics) và trải nghiệm làm gia sư, làm phong phú ngân hàng candidate của nhóm. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt cho candidate Tạo câu hỏi ôn tập: "Làm sao đảm bảo AI không sinh ra câu hỏi sai kiến thức toán/logic (hallucination) khiến người học sai theo?" | Giúp nhóm nhận thức rõ rủi ro về "độ chính xác" (accuracy) của kiến thức AI sinh ra, từ đó bắt buộc phải thiết lập ranh giới HITL (Human-in-the-loop). |
+| Nhận phản biện | Câu hỏi tôi nhận được (về bài toán sinh test dbt): "Mức độ phức tạp của business rules tại công ty có vượt quá khả năng hiểu của AI từ schema không?" | Tôi đã sửa gì: Thừa nhận rằng Rule/Template có thể giải quyết được đa số, AI chỉ can thiệp vào các test logic phức tạp đặc thù. |
+| Gom cluster / cây OST | Tham gia phân loại candidate vào các nhóm (Kỹ thuật/MLOps, Giáo dục, v.v.) và xây dựng Opportunity Solution Tree. | Giúp nhóm gạch bỏ các thẻ "Solution" (như tạo Chatbot) ra khỏi tầng Opportunity để tập trung vào Nỗi đau thật sự. |
+| Chọn candidate problem | Cùng nhóm tranh luận giữa bài toán Kỹ thuật (Sinh test data) và Giáo dục (Tạo câu hỏi trắc nghiệm ôn thi). | Đồng thuận chọn Candidate #7 (Tạo câu hỏi trắc nghiệm ôn tập bám sát tài liệu) vì có tệp user lớn ngay trong lớp để kiểm chứng. |
+| Kiểm chứng / research | Đóng góp góc nhìn về luồng dữ liệu (Data Pipeline) và xử lý tài liệu lớn (như file slide dài) từ trải nghiệm làm Data Engineer. | Giúp nhóm nhận diện rủi ro "Lost in the middle" của các mô hình LLM khi nhồi quá nhiều nội dung tài liệu. |
+| Quy trình nhóm | Đóng góp thiết kế cấu trúc lưu trữ và luồng xử lý: Rule (băm nhỏ/chunking tài liệu) -> AI (sinh câu hỏi) -> Human (kiểm duyệt). | Đảm bảo quy trình có tính khả thi về mặt kiến trúc hệ thống (Workflow) thay vì phó mặc hoàn toàn cho Agent. |
+| Problem Statement | Là **Người chính tại CP5 (Problem Statement v0)**, phối hợp cùng Hà Anh định nghĩa cụ thể Actor, Bottleneck và Success Metric. | Viết ra được định nghĩa bài toán không bị lẫn lộn các "buzzword" công nghệ, chỉ tập trung vào vấn đề nghiệp vụ và nỗi đau người học. |
+| Mức can thiệp AI | Đóng góp việc phân tích mức độ can thiệp dưới góc độ rủi ro hệ thống. | Thống nhất chọn **Workflow (AI hỗ trợ trích xuất, người duyệt)** để đảm bảo tính an toàn dữ liệu và kiến thức. |
+| Quyết định | Tham gia đánh giá rủi ro về Viability (chi phí API xử lý lượng tài liệu lớn). | Thống nhất đưa ra quyết định **Not Yet**, vì chi phí vận hành (token) trên diện rộng cho sinh viên là một rào cản lớn. |
 
 ---
 
@@ -163,12 +163,12 @@ Tìm JD -> Đọc JD, xác định kỹ năng -> Đối chiếu với CV -> Sử
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Dùng AI để gợi ý cách diễn đạt chuẩn theo cấu trúc Job Story cho các ý tưởng về Data Engineering và Gia sư. | Định dạng nhanh và gọn gàng các cụm từ kỹ thuật, giúp người ngoài ngành dễ hiểu hơn. | AI thỉnh thoảng tự ý đưa thêm các giải pháp (ví dụ: "dùng AI để tự động chấm") vào phần Job Story. | Cắt bỏ hoàn toàn các ý mang tính "solution", chỉ giữ nguyên trạng thái "tôi muốn..." thuần túy về kết quả. |
+| CP2 Problem Card | Dùng AI để bóc tách quy trình hiện tại (As-Is) và dự phóng quy trình nháp. | Hỗ trợ chia nhỏ các bước rất logic (như quy trình làm test dbt hay soạn CV). | Ước tính thời gian (phút/giờ) của AI rất thiếu thực tế và rập khuôn. | Điền lại các con số thời gian và tần suất bằng đúng số liệu trải nghiệm cá nhân của tôi (ví dụ: mất bao lâu để soạn 1 đề toán). |
+| CP4 Research | Không sử dụng AI trực tiếp để research mà dựa vào kiến thức nền tảng về DWH/Data Pipeline để đánh giá rủi ro hệ thống. | (Không áp dụng) | (Không áp dụng) | (Không áp dụng) |
+| CP5 Quy trình | Dùng AI để format các luồng quy trình (text) thành sơ đồ bước (step-by-step). | Trực quan hóa văn bản nhanh chóng. | Luôn gộp chung bước "AI sinh nội dung" và "Kiểm duyệt" làm một, làm mờ đi rủi ro hệ thống. | Chủ động tách bạch rõ ràng luồng Rule, AI và Human (HITL) trong việc băm tài liệu và sinh câu hỏi. |
+| CP5–6 Problem Statement | Phân tích chéo (Review) bản Problem Statement v0 để tìm xem có lẫn từ ngữ giải pháp (Solution) nào không. | Chỉ ra được một vài động từ có xu hướng "nhúng AI" vào định nghĩa bài toán. | Đưa ra các Metric quá hoàn hảo (tỷ lệ lỗi 0%) không phù hợp với thực tế RAG/LLM hiện nay. | Đặt lại Success Metric thực tế hơn (ví dụ: giảm thời gian từ 45' xuống < 3', tỷ lệ câu hỏi chính xác >= 90%). |
+| CP6 Mức can thiệp / quyết định | Dùng AI để gợi ý khung đánh giá 4 rủi ro (Value, Usability, Feasibility, Viability). | Hệ thống hóa lại góc nhìn về chi phí API và token (Viability). | AI thiên vị việc "Go" và thường hạ thấp chi phí vận hành. | Đánh giá độc lập lại chi phí (bằng kiến thức Data) và quyết định cùng nhóm là "Not Yet" do rào cản chi phí. |
 
 ---
 
@@ -177,20 +177,25 @@ Tìm JD -> Đọc JD, xác định kỹ năng -> Đối chiếu với CV -> Sử
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Qua việc lắng nghe các vấn đề của nhóm, tôi nhận thấy sự khác biệt rõ rệt trong lăng kính quan sát giữa các thành viên. Bản thân tôi xuất thân từ việc học Data (MIS) và làm Data Engineer (từng build Data Warehouse), nên tôi có xu hướng tìm các nỗi đau mang tính hệ thống, backend (như test chất lượng dữ liệu). Tuy nhiên, các bạn khác lại đưa ra những nỗi đau rất "sát sườn" với sinh viên như đối chiếu deadline hay tóm tắt slide. Điều này dạy tôi rằng một "problem" tốt không nhất thiết phải là một vấn đề kỹ thuật cao siêu, mà phải là vấn đề có lượng người dùng thực tế đông đảo, có nỗi đau thường trực và dễ dàng lấy bằng chứng kiểm chứng. Bài toán ôn thi của nhóm cuối cùng được chọn chính là vì nó đáp ứng đủ các tiêu chí về tính thực tiễn và dễ tiếp cận đối tượng mục tiêu.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có, hiện tượng này xảy ra rất rõ khi nhóm bắt đầu gom cụm (cluster) và vẽ cây Opportunity Solution Tree (OST). Vừa mới chốt cụm "Ôn thi", các thành viên đã lập tức bàn nhau về việc dùng LangChain, RAG như thế nào, hay tạo Chatbot hỏi đáp ra sao. Nhóm nhận ra sai lầm này khi nhìn vào cây OST và thấy tầng "Opportunity" chứa toàn các tính năng công nghệ thay vì nỗi đau của người dùng. Để khắc phục, nhóm trưởng (Hà Anh) và các thành viên đã kiên quyết gạch bỏ các ý tưởng giải pháp đó, ép cả nhóm quay lại trả lời đúng câu hỏi cốt lõi: "Vấn đề hiện tại khiến sinh viên tốn thời gian ôn tập là gì?".
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Có, tôi đã đổi ý hoàn toàn về bài toán "Viết test chất lượng dữ liệu bằng tay" của mình. Ban đầu, tôi cho rằng đây là một use case hoàn hảo để dùng AI vì công việc này rất tốn thời gian. Nhưng sau khi bị phản biện rằng "Các rule/template có sẵn trong dbt đã giải quyết phần lớn vấn đề, vậy AI can thiệp vào có thực sự mang lại giá trị đột phá hay chỉ làm tăng chi phí verify ngược lại?", tôi nhận ra mình đã quá "cuồng" công nghệ mà bỏ qua phương án non-AI (Rule-based) vốn đã rất hiệu quả. Sự phản biện này giúp tôi vui vẻ nhường chỗ cho bài toán ôn tập của nhóm vì nó có độ mở và sự cần thiết của AI lớn hơn nhiều.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Kết quả kiểm chứng làm tôi khá bất ngờ ở điểm: sinh viên thực chất không lười đọc, mà họ sợ đọc nhiều nhưng không trúng trọng tâm (hiện tượng "lost in the middle"). Ban đầu, chúng tôi nghĩ AI chỉ cần nhả ra càng nhiều câu hỏi trắc nghiệm càng tốt để sinh viên làm. Nhưng qua phỏng vấn, nỗi sợ lớn nhất của họ là AI bịa kiến thức (hallucination) hoặc hỏi những thứ giảng viên đã bỏ qua. Điều này làm thay đổi hoàn toàn cách chúng tôi định nghĩa bài toán: vấn đề không phải là tốc độ tạo câu hỏi, mà là "độ chính xác và khả năng truy vết (grounding)" của câu hỏi đó về đúng trang slide nào.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Vì tôi là người trực tiếp chịu trách nhiệm chính cho CP5 (Problem Statement v0), điều khó nhất với tôi là giữ kỷ luật ngôn từ. Rất dễ để vô tình chèn các từ như "tự động hóa", "trợ lý thông minh", "dùng GenAI" vào phần mô tả giải pháp mong đợi. Việc phải "gọt rửa" hoàn toàn các yếu tố công nghệ để chỉ mô tả trạng thái lý tưởng của người dùng (từ mất 45 phút xuống dưới 3 phút) đòi hỏi sự thay đổi tư duy rất lớn. Hơn nữa, việc xác định Success Metric sao cho có thể đo đếm được (thay vì "cải thiện chất lượng học tập") cũng là một thách thức không nhỏ.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu làm lại, với tư cách là người thiên về Data/Hệ thống, tôi sẽ phản biện nhóm mạnh mẽ hơn ở phần đánh giá tính khả thi kỹ thuật (Feasibility) và chi phí (Viability) ngay từ sớm. Việc đưa một file PDF slide dài hàng trăm trang vào LLM để trích xuất ý chính mà không bị sót (chunking strategy) là một bài toán Data Engineering không hề đơn giản, tốn rất nhiều token. Tôi sẽ yêu cầu nhóm tính toán nháp thử chi phí API cho 1 sinh viên/1 môn học để thấy rõ bức tranh tài chính trước khi chốt Problem Statement, điều này sẽ giúp quyết định "Not Yet" ở CP6 trở nên vững chắc và có số liệu chứng minh rõ ràng hơn.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
----
+Bài toán của nhóm xuất phát từ **problem** sinh viên ôn thi tốn nhiều thời gian đọc slide dài thụ động nhưng không ghi nhớ được trọng tâm và thiếu nguồn câu hỏi luyện tập bám sát tài liệu. **Quy trình** hiện tại bị tắc nghẽn lớn nhất ở khâu tổng hợp kiến thức và tự biên soạn câu hỏi/đáp án. Do đó, **metric** được đặt ra là giảm thời gian tạo bộ 10 câu hỏi chuẩn xác xuống dưới 3 phút và giữ tỷ lệ câu hỏi bám sát slide trên 90%. Để tránh rủi ro AI sinh câu hỏi sai hoặc làm người học ảo tưởng kiến thức (hiểu bài giả tạo), **boundary** bắt buộc phải có sự kiểm duyệt của con người (HITL) và AI phải trích dẫn rõ nguồn slide. Vì tính chất cần đảm bảo độ chính xác học thuật cao, **mức can thiệp AI** được chốt ở dạng Workflow (AI sinh nháp, người duyệt) chứ không tự động hoàn toàn (Agent). Cuối cùng, do bài toán băm nhỏ slide dài xử lý bằng API quá tốn kém chi phí vận hành (Viability), nhóm đưa ra **quyết định** "Not Yet" và cần tìm kiếm mô hình tối ưu chi phí hơn trước khi làm thực tế.
 
 ## 7. Tài liệu tham khảo
 
