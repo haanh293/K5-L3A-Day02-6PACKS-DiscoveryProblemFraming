@@ -8,7 +8,7 @@
 - Tên nhóm: 6PACKS
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu): Tạo bộ câu hỏi ôn tập bám sát tài liệu
-- Quyết định cuối: Go / Not Yet / No-Go
+- Quyết định cuối: Not Yet
 
 ---
 
