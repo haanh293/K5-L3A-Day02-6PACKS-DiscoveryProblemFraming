@@ -10,7 +10,7 @@
 - MSSV: 2A202603636
 - Email trường (không bắt buộc, repo có thể để public): 26ai.kienhd@vinuni.edu.vn
 - Tên nhóm: 6PACKS
-- Link repo nhóm:  https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming/tree/main
+- Link repo nhóm:  https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming
 
 ---
 
