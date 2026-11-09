@@ -17,7 +17,7 @@
 | 3 |Hoàng Đăng Kiên |2A202603636 |Phụ trách vẽ Quy trình (Process) |kienHD03 |
 | 4 |Nguyễn Sỹ Huy Kiên |2A202603641 |Phụ trách Kiểm chứng (Validation) |devouring-blade |
 | 5 |Nguyễn Đức Trọng |2A202603644 |Phụ trách Đánh giá (Eval & Risk) |fishiousrend05 |
-| 6 |Ngô Văn Tuân |2A202603617 |Phụ trách Giải pháp AI (AI Canvas) |ngotuna23a |
+| 6 |Ngô Văn Tuân |2A202603630 |Phụ trách Giải pháp AI (AI Canvas) |ngotuna23a |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
