@@ -160,3 +160,28 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 - Tốc độ tạo văn bản không phải bottleneck chính; cần đo độ phủ kiến thức, thời gian kiểm chứng và chi phí. Citation theo trang, grounding và bước người học tự làm bài giúp kiểm soát rủi ro AI sai, nhưng chưa thay thế được việc kiểm thử chất lượng và tính khả thi.
+
+### TranXuanTruong-2A202603617
+**Phần việc phụ trách:**
+
+- Phụ trách chính CP4 — Research: nghiên cứu giải pháp, đối thủ, liên kết tài liệu.
+- Phụ trách hỗ trợ CP5 — Quy trình trước/sau - sơ đồ quy trình và bảng Before/After.
+- Đóng góp pitching (card #3, #4), phản biện các candidate khác và cùng xây dựng cây OST.
+
+**Đóng góp cụ thể (mình đã làm gì, ra sản phẩm gì):**
+
+- Pitch 2 candidate (#3 Release notes, #4 Action items họp); phản biện làm rõ phạm vi bài #2 và #5.
+- Tổng hợp bảng research giải pháp trắc nghiệm/RAG.
+- Hoàn thiện sơ đồ quy trình 6 bước có nhánh rẽ thất bại, bảng chi tiết 4.2 và bảng Before/After 4.3.
+- Hỗ trợ viết Problem Statement v0/v1, hoàn thiện nội dung mục 6 (AI Canvas, PAIR) và mục 8 (Rủi ro/Not Yet).
+
+**Bằng chứng (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):**
+
+- `group_report.md`: Mục 2 (bảng pitch, cluster, OST, chấm điểm); Mục 3 (research); Mục 4 (quy trình 4.1, 4.2, 4.3); Mục 5 & 7 (Problem Statement v0/v1); Mục 6 & 8 (AI Canvas, PAIR, 4 rủi ro).
+- `report/assets/`: Sơ đồ quy trình hiện tại.
+- Commit GitHub (user `XuanTruong28`): Các commit `Up process diagram mục 4.1`, `hoàn thành mục 4.1 quy trình hiện tại`, `CP4.2 4.3`, `CP6`, `format CP6`, `Update bottleneck and risk analysis sections`.
+
+**Điều mình học được từ phần nhóm:**
+
+- Biết cách xác định đúng mức can thiệp AI (chọn RAG Workflow thay vì over-engineer lên Agent) và thiết kế cơ chế Human-in-the-loop để kiểm soát lỗi ảo giác.
+- Thấu hiểu việc ra quyết định Not Yet: dù giải pháp khả thi kỹ thuật và nhu cầu cao, vẫn phải tạm dừng nếu rủi ro chi phí token và khả năng chỉnh sửa của người dùng chưa được tối ưu.
