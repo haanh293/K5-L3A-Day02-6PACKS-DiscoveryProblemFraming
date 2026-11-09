@@ -146,21 +146,25 @@ Tổng hợp:
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
-```text
-
-```
+Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+|:---:|:---|:---|:---|:---|:---|
+| **1** | Sinh viên ôn thi | Slide bài giảng, file PDF/Word giáo trình | Danh sách các chương, khái niệm chính cần ôn | 30 phút / 1–2 tuần trước kỳ thi | Đọc thụ động, tạo cảm giác hiểu bài giả tạo (illusion of competence). |
+| **2** | Sinh viên ôn thi | Nhu cầu tìm đề thực hành | Tin nhắn/bài đăng trên nhóm Zalo, Facebook, diễn đàn | 15 phút / Mỗi môn học | Đăng bài hỏi xin đề thi thử, file quiz cũ của các khóa trước. |
+| **3** | Người cho đề, Sinh viên | Bài đăng hỏi xin đề | Tệp đề cũ (hoặc không nhận được phản hồi) | **1 – 2 ngày** (chờ đợi) | **Bị động hoàn toàn:** Nếu có người gửi thì qua B4; nếu không ai gửi thì buộc phải tự mò mẫm đọc lại slide (chuyển thẳng B6). |
+| **4** | Sinh viên ôn thi | Các tệp đề cũ thu thập được, giáo trình hiện tại | Bộ câu hỏi lọc sơ bộ còn đúng chương trình học | **45 phút** / Mỗi đợt xin được đề | **Tốn công rà soát:** Phải loại bỏ các câu thuộc chương trình cũ đã giảm tải hoặc đổi giáo trình. |
+| **5** | Sinh viên ôn thi | Bộ câu hỏi đã lọc | Bài làm với các đáp án đã chọn | **30 phút** / Mỗi lần làm thử | Làm bài trong tâm lý bất an vì không chắc đề có chuẩn và có đáp án đúng đi kèm hay không. |
+| **6** | Sinh viên ôn thi | Bài làm, tài liệu/slide bài giảng gốc | Điểm số và danh sách câu sai đã được kiểm chứng | **30 phút** / Mỗi bài test | **Vòng lặp sửa sai:** Đề cũ thường thiếu đáp án chuẩn hoặc giải sai, sinh viên phải tự lật từng trang slide để dò; nếu sai lệch quá nhiều lại phải quay lại lọc đề khác (về B4). |
+
+---
 
 **Bottleneck chính:**
+
+1. **Điểm nghẽn chờ đợi & phụ thuộc (Bước 2 & 3):** Rơi vào thế hoàn toàn bị động, mất từ **vài giờ đến 1–2 ngày** chờ người khác chia sẻ đề. Nếu không có ai gửi, kế hoạch ôn tập bị gãy và rơi vào tình trạng nước đến chân mới nhảy.
+2. **Điểm nghẽn sàng lọc & kiểm chứng (Bước 4 & 6):** 
+   * Tốn **45 phút** lọc đề trôi nổi nhưng vẫn rủi ro học lệch kiến thức do giáo trình thay đổi qua các năm.
+   * Mất thêm **30 phút** lật từng trang slide để tự giải và đính chính đáp án do đề cũ thiếu lời giải giải thích, tạo thành vòng lặp tốn thời gian giữa B6 và B4.
 
 ### 4.2. Quy trình tương lai
 
