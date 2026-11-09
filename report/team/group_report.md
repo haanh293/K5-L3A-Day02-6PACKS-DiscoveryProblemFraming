@@ -45,10 +45,10 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm 60% thời gian chuẩn bị câu hỏi ôn tập và tăng 40% hiệu quả ghi nhớ kiến thức trọng tâm trước kỳ thi.
+├── Opportunity A: Sinh viên tốn nhiều thời gian đọc lại slide/giáo trình một cách thụ động nhưng không đo lường được mình đã thực sự hiểu và nhớ bài hay chưa.
+├── Opportunity B: Rất tốn công sức để tự lọc tài liệu và tìm/soạn bộ câu hỏi trắc nghiệm bám sát đúng đề cương của giảng viên trên lớp.
+└── Opportunity C: Sinh viên lo sợ các câu hỏi hoặc đáp án tự tạo bị sai lệch/ảo giác kiến thức, dẫn đến việc học vẹt và làm bài thi sai.
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
