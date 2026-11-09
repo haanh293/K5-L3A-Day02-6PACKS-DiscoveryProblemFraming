@@ -128,16 +128,16 @@ HIỆN TẠI — Hậu quả xảy ra sau thi
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card |Trình bày ý tưởng |Nhóm cân nhắc lựa chọn ý tưởng |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Do khả năng sắp xếp tài liệu, lộ trình ôn tập chưa tốt hay thực sự chương trình dạy có thứ tự không hợp lý ? |Nhóm quyết định bỏ ý tưởng này |
+| Nhận phản biện | Câu hỏi tôi nhận được: Làm sao để đảm bảo chất lượng câu hỏi AI tạo ra ?| Tôi đã sửa gì: |
+| Gom cluster / cây OST |Đóng góp ý kiến xây dựng và chỉnh sửa |Nhóm đã chốt phương án cuối cùng |
+| Chọn candidate problem |Thảo luận chấm điểm shorlist và lựa chọn Candidate |Nhóm quyết định lựa chọn Candidate #7 |
+| Kiểm chứng / research |Tham gia đóng góp ý kiến |Nhóm chốt phương án và hoàn thành sau thảo luận |
+| Quy trình nhóm |Tham gia đóng góp ý kiến |Nhóm chốt phương án và hoàn thành sau thảo luận |
+| Problem Statement |Nhận ý kiến và góp ý của thành viên nhóm để hoàn thành |Hoàn thành Problem Statement |
+| Mức can thiệp AI |Tham gia đóng góp ý kiến |Nhóm hoàn thành CP6 |
+| Quyết định |Góp ý để đưa ra quyết định cuối |Nhóm đưa ra quyết định cuối cùng |
 
 ---
 
