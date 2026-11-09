@@ -145,11 +145,11 @@ HIỆN TẠI — Hậu quả xảy ra sau thi
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
+| CP1 Scan |Dùng AI phản biện ý tưởng |AI đưa ra phản biện hữu ích |AI đưa ra một số nhận định không thực tế |Ghi nhận phản biện có ích của AI để cải thiện ý tưởng |
+| CP2 Problem Card |Dùng AI phân tích kỹ hơn về các vấn đề của ý tưởng |AI chỉ ra những điểm chưa hợp lý |Nhiều phân tích của AI không phù hợp với thực tế |Chỉnh sửa theo những gì của AI mà mình đánh giá là đúng |
+| CP4 Research |Dùng AI tìm kiếm một số tài liệu liên quan |AI tìm kiếm nhanh và phù hợp với nhu cầu |Một số nguồn AI tìm ra không uy tín |Kiểm chứng độ uy tính nội dung và note lại nội dung cần thiết |
+| CP5 Quy trình |Dùng AI đưa ra nhận xét về quy trình nhóm đã đưa ra |AI nhận xét chi tiết về điểm mạnh và điểm yếu |Một số điểm yếu AI đưa ra không phù hợp với ý tưởng |Sửa những điểm yếu hợp lý mà AI đưa ra |
+| CP5–6 Problem Statement |Dùng AI phân tích và nhận xét nội dung nhóm đã thảo luận |AI đưa ra nhận xét chi tiết về nội dung nhóm đã làm|Một số nhận xét của không phù hợp thực tế |Chỉnh sửa những nội dung chưa hợp lý |
 | CP6 Mức can thiệp / quyết định | | | | |
 
 ---
