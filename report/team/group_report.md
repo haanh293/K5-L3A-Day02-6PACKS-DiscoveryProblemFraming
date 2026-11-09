@@ -166,6 +166,7 @@ Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
    * Tốn 45 phút lọc đề trôi nổi nhưng vẫn rủi ro học lệch kiến thức do giáo trình thay đổi qua các năm.
    * Mất thêm 30 phút lật từng trang slide để tự giải và đính chính đáp án do đề cũ thiếu lời giải giải thích, tạo thành vòng lặp tốn thời gian giữa B6 và B4.
 
+---
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
@@ -190,8 +191,8 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 * **Trường hợp 1: AI trả sai định dạng / Lỗi cấu trúc JSON:**
   * *Xử lý:* Rule Validator tự động kích hoạt prompt retry (tối đa 2 lần). Nếu vẫn không đúng schema, hệ thống tự động loại bỏ chunk lỗi và chuyển sang chunk tiếp theo để không ngắt quãng luồng sinh câu hỏi.
 * **Trường hợp 2: AI bị ảo giác (Hallucination) hoặc sinh câu hỏi lệch:**
-  * *Cơ chế Human-in-the-loop:* Luôn hiển thị nút **"Xem trích dẫn gốc (Slide số X)"** dưới mỗi câu hỏi để người học tự đối chiếu trong 3 giây.
-  * *Tính năng Fallback:* Người dùng bấm **"Đổi câu khác (Regenerate)"** để AI sinh lại câu hỏi từ đoạn văn đó, hoặc bấm **"Báo lỗi câu hỏi"** để hệ thống gắn cờ (flag).
+  * *Cơ chế Human-in-the-loop:* Luôn hiển thị nút "Xem trích dẫn gốc (Slide số X)" dưới mỗi câu hỏi để người học tự đối chiếu trong 3 giây.
+  * *Tính năng Fallback:* Người dùng bấm "Đổi câu khác (Regenerate)" để AI sinh lại câu hỏi từ đoạn văn đó, hoặc bấm "Báo lỗi câu hỏi" để hệ thống gắn cờ (flag).
 
 ---
 
@@ -199,11 +200,12 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Chỉ số | Trước (Quy trình thủ công) | Sau (Kỳ vọng với AI & Automation) | Ghi chú |
 |:---|:---|:---|:---|
-| **Số bước** | **6 bước** (từ đăng bài xin đề đến tra slide dò đáp án) | **3 bước từ góc nhìn người dùng** (Upload $\rightarrow$ AI xử lý $\rightarrow$ Luyện tập) | Cắt bỏ hoàn toàn các bước chờ đợi và tìm kiếm trung gian. |
-| **Tổng thời gian** | **1 – 2 ngày** (chờ đề) + **150 – 180 phút** (sàng lọc & tự giải) | **Dưới 3 phút** để tạo hoàn chỉnh bộ 20–30 câu trắc nghiệm | Sinh viên bắt đầu ôn tập chủ động ngay khi có bài giảng. |
-| **Số bước thủ công** | **5 / 6 bước** đều đòi hỏi sinh viên thao tác thủ công | **1 bước duy nhất** (Kéo thả tài liệu lên hệ thống) | Toàn bộ khâu bóc tách, soạn đề và tạo đáp án được tự động hóa. |
+| **Số bước** |6 bước (từ đăng bài xin đề đến tra slide dò đáp án) | 3 bước từ góc nhìn người dùng (Upload $\rightarrow$ AI xử lý $\rightarrow$ Luyện tập) | Cắt bỏ hoàn toàn các bước chờ đợi và tìm kiếm trung gian. |
+| **Tổng thời gian** | 1 – 2 ngày (chờ đề) + 150 – 180 phút (sàng lọc & tự giải) | Dưới 3 phút để tạo hoàn chỉnh bộ 20–30 câu trắc nghiệm | Sinh viên bắt đầu ôn tập chủ động ngay khi có bài giảng. |
+| **Số bước thủ công** | 5 / 6 bước đều đòi hỏi sinh viên thao tác thủ công | 1 bước duy nhất (Kéo thả tài liệu lên hệ thống) | Toàn bộ khâu bóc tách, soạn đề và tạo đáp án được tự động hóa. |
 | **Bottleneck chính** | Chờ xin đề trên nhóm (1–2 ngày) và tốn 45 phút lọc xem đề có đúng giáo trình mới | **Thời gian bóc tách file & độ trễ gọi LLM API** (khoảng 30 – 90 giây tùy độ dài tài liệu) | Chuyển từ điểm nghẽn "chờ con người" sang "độ trễ xử lý kỹ thuật". |
 | **Rủi ro mới phát sinh** | Học lệch kiến thức do đề cũ lỗi thời; nản lòng quay lại đọc slide thụ động | * Tài liệu scan/ảnh khó bóc tách text nếu không có OCR tốt.<br>* Ảo giác kiến thức nhẹ nếu slide quá ngắn hoặc rời rạc. | Cần áp dụng module OCR cho PDF ảnh và kiểm soát context threshold khi chunking. |
+
 
 ## 5. Problem Statement v0 (CP5)
 
