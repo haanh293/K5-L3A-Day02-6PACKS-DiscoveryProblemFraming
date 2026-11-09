@@ -233,43 +233,55 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ---
 
-## 6. Mức can thiệp AI (CP6)
+### 6. Mức can thiệp AI (CP6)
 
-### 6.1. Ma trận độ mơ hồ × độ phức tạp
+#### 6.1. Ma trận độ mơ hồ × độ phức tạp
+* **Bài của nhóm nằm ở ô:** **mơ hồ cao — phức tạp thấp (high ambiguity, low complexity)**.
+* **Vì sao:** 
+  * *mơ hồ cao:* việc đọc hiểu ngữ nghĩa bài giảng, tóm tắt ý chính và sáng tạo ra các "đáp án nhiễu" (distractors) hợp lý đòi hỏi khả năng xử lý ngôn ngữ tự nhiên linh hoạt, không thể viết bằng các quy tắc if/else truyền thống.
+  * *phức tạp thấp:* luồng công việc rất tuyến tính và cố định (upload file $\rightarrow$ chia chunk $\rightarrow$ sinh JSON câu hỏi $\rightarrow$ làm bài), không cần AI phải lập kế hoạch nhiều bước (reasoning) hay tương tác với môi trường bên ngoài.
 
-Bài của nhóm nằm ở ô:
+---
 
-Vì sao:
-
-### 6.2. So sánh 4 mức
+#### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
-|---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+|:---|:---|:---|:---|:---:|
+| **no AI** (sửa quy trình) | Xin giảng viên ngân hàng đề hoặc tự gõ flashcard thủ công (Quizlet/Anki). | Thi các môn có sẵn ngân hàng đề công khai trên mạng. | Mất nhiều thời gian; rủi ro học nhầm đề cũ lệch giáo trình. | Không |
+| **rule** | Dùng Regex quét các từ in đậm/gạch chân trong file Word và làm bài tập "điền vào chỗ trống". | Chỉ cần học thuộc lòng từ vựng rời rạc. | Câu hỏi ngô nghê, không tạo được câu hỏi tư duy trắc nghiệm 4 đáp án. | Không |
+| **workflow** | LLM đọc các chunk văn bản, trích xuất ý chính và sinh JSON (MCQ) bám sát nội dung, con người làm bài và rà soát. | Cần tạo đề thi thử nhanh, chính xác, sát tài liệu cá nhân. | AI sinh lỗi JSON hoặc bịa kiến thức (ảo giác). | **Có** |
+| **agent** | AI tự lên lịch học, tự tra cứu web, ép sinh viên làm bài và tự điều chỉnh độ khó. | Cần một "gia sư ảo" kèm cặp toàn diện. | Over-engineering; khó kiểm soát chất lượng; sai mục tiêu "cần bộ đề ngay". | Không |
 
-**Mức chọn:**
+* **Mức chọn:** **workflow (cụ thể là RAG workflow kết hợp structured output).**
+* **Vì sao không chọn mức đơn giản hơn:** Các mức no AI và rule-based không thể hiểu được ngữ cảnh chuyên ngành để tóm tắt thành câu hỏi và không đủ khả năng sáng tạo ra 3 đáp án nhiễu hợp logic để đánh lừa sinh viên.
 
-**Vì sao không chọn mức đơn giản hơn:**
+---
 
-### 6.3. AI Canvas rút gọn
+#### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
-|---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+|:---|:---|
+| **prediction** (AI dự đoán / tạo ra gì?) | Dự đoán và tạo ra nội dung câu hỏi trắc nghiệm (MCQ) cùng 3 đáp án nhiễu từ đoạn văn bản (chunk). |
+| **judgment** (con người cân nhắc, quyết định gì?) | Sinh viên đối chiếu câu hỏi với số trang/trích dẫn gốc, quyết định xem câu hỏi có đúng trọng tâm hay bịa đặt trước khi ghi nhớ. |
+| **action** (hành động cuối cùng là gì, ai làm?) | Hệ thống hiển thị bài thi; Sinh viên thực hiện hành động click chọn đáp án và xem lời giải. |
+| **outcome** (đo kết quả bằng gì?) | Thời gian có bộ đề (dưới 3 phút); Tỷ lệ câu hỏi chính xác, không ảo giác (>95%). |
+| **input** (dữ liệu đầu vào gì? có sẵn không?) | File bài giảng (PDF, Word, Slide) của sinh viên. Hoàn toàn có sẵn ngay trên máy tính sinh viên. |
+| **feedback** (lấy phản hồi ở đâu để cải thiện?) | Sinh viên dùng nút "báo lỗi câu hỏi" hoặc đánh giá thumbs up/down sau mỗi câu hỏi sinh ra bị lệch kiến thức. |
 
-### 6.4. Hai câu hỏi của Google PAIR
+---
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+#### 6.4. Hai câu hỏi của Google PAIR
 
+* **Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)?**
+  * **Đáp án:** hỗ trợ (augment).
+  * **Bằng chứng:** Sinh viên không cần một con AI "đi thi hộ" hay "tự học thay". Họ cần một công cụ đóng vai trò như người trợ giảng, xử lý khâu lao động chân tay (lọc đề, gõ câu hỏi) để họ có tài liệu luyện tập nhanh nhất. Việc tiếp thu kiến thức và chọn đáp án cuối cùng bắt buộc phải do sinh viên thực hiện.
+
+* **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót?**
+  * **Đáp án:** **báo nhầm (false positive / ảo giác kiến thức)** tệ hơn rất nhiều so với bỏ sót (false negative).
+  * **Vì sao:** Nếu AI bỏ sót một vài đoạn văn không tạo câu hỏi, sinh viên lật slide vẫn có thể tự đọc bù. Nhưng nếu AI "báo nhầm" bằng cách tự bịa ra một kiến thức sai lệch mà slide không hề dạy, sinh viên học vẹt theo sẽ làm sai bài thi thật, dẫn đến hậu quả nghiêm trọng về điểm số và mất hoàn toàn niềm tin vào sản phẩm.
+  * **Thiết kế đã xử lý thế nào:** 
+    1. Ép framework RAG chỉ được lấy thông tin trong chunk (grounding). 
+    2. Giao diện bắt buộc đính kèm vị trí trích dẫn (số trang, nguyên văn) ngay bên dưới lời giải để sinh viên tự kiểm chứng (human-in-the-loop) thay vì tin tưởng AI 100%.
 ---
 
 ## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
