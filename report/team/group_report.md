@@ -190,15 +190,19 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** |Sinh viên đại học đang ôn thi |
+| **Quy trình** |1. Đọc lướt tài liệu - 2. Lên group xin đề - 3. Chờ đợi người gửi - 4. Lọc xem đề nào còn phù hợp giáo trình - 5. Tự làm và mò mẫm dò lại đáp án. |
+| **Bottleneck** |Mất từ vài giờ đến vài ngày chờ đợi nhưng không đảm bảo chất lượng. |
+| **Impact** | Mất nhiều thời gian tìm kiếm thay vì thực sự học; tâm lý bất an vì đề trôi nổi.|
+| **Success Metric** (baseline → target, cách đo) |Thời gian để có bộ đề 50 câu (kèm đáp án và giải thích) giảm từ vài giờ/ngày xuống dưới 3 phút. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) |AI không được làm: Tự sáng tạo (hallucinate) kiến thức, thuật ngữ ngoài tài liệu cung cấp; không cam kết trúng đề thật. HITL: Sinh viên phải upload tài liệu chuẩn ban đầu; tự đối chiếu lại các câu hỏi tính toán/logic phức tạp; báo lỗi khi thấy đáp án mâu thuẫn để AI hiệu chỉnh dựa trên phản hồi. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
+AI phản biện người dùng (Actor): Quá rộng và ôm đồm
+Vấn đề: "Sinh viên đại học" là một tệp quá rộng. Khả năng xử lý của AI rất khác nhau tùy theo ngành học. AI làm rất tốt đề trắc nghiệm Luật, Quản trị kinh doanh, Lịch sử Đảng (thiên về text, khái niệm); nhưng sẽ dễ bị "ảo giác" (hallucinate) và tính toán sai với các môn như Giải tích, Cơ học lượng tử, hay Kế toán vĩ mô.
+Đề xuất: Thu hẹp Actor hoặc định rõ phạm vi (Scope). Ví dụ: "Sinh viên đại học khối ngành Kinh tế/Xã hội" hoặc quy định rõ AI chỉ hỗ trợ định dạng câu hỏi lý thuyết, khái niệm, tình huống (case study), không hỗ trợ giải phương trình hay tính toán phức tạp ở giai đoạn 1.
+=> Nhóm đồng ý với phản biện này.
 -
 
 ---
