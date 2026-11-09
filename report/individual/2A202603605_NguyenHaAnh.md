@@ -124,9 +124,8 @@ $\rightarrow$ [Nhắn tin thông báo qua nhóm chat] (2 phút)
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
-SSuccess metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết.CóBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".ucCócesBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".s
-|Rủi ro niềm tin (Trust/Safety): Nếu AI tự động map keyword từ JD vào CV, ứng viên có thể nộp một bản CV phóng đại, chứa những kỹ năng họ không thực sự có.|Có | Bổ sung giới hạn (Boundary) vào giải pháp: AI chỉ được phép đối chiếu và gợi ý sắp xếp lại những kinh nghiệm đã có sẵn trong Master CV, tuyệt đối không tự bịa thêm dòng kinh nghiệm mới.| metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết.CóBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".
+|Success metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết. |Có |Bổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên". |
+
 
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
