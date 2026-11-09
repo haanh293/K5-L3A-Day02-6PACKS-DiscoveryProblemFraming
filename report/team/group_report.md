@@ -126,7 +126,7 @@ Tổng hợp:
 | | | | |
 
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:
+**Nhóm đã sửa problem thế nào sau kiểm chứng:**
 
 1.Dịch chuyển trọng tâm Bottleneck: Ban đầu ở CP3, nhóm nghĩ bottleneck chỉ là "tốn thời gian tìm kiếm và lọc tài liệu để soạn câu hỏi". Sau kiểm chứng, nhóm nhận ra sinh viên đã biết dùng ChatGPT nhưng bị nghẽn nặng ở 2 bước: (1) Câu hỏi sinh ra bị lệch trọng tâm/bỏ sót phần giữa tài liệu dài và (2) Tốn 15–25 phút phải tự Ctrl+F đối chiếu đáp án với slide gốc vì sợ AI ảo giác.
 
@@ -293,7 +293,7 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 | **Quy trình** |Sinh viên upload file bài giảng -> Hệ thống chia chunk và dùng AI sinh câu hỏi dạng MCQ đính kèm trích dẫn (số trang) -> Sinh viên tự làm bài test -> Nếu sai, hệ thống gợi ý trang cần đọc lại (Hint) -> Sinh viên đối chiếu lại slide gốc và xem đáp án hoàn chỉnh. |
 | **Bottleneck** |Tốn quá nhiều thời gian để tự soạn câu hỏi và mất 30 phút tự Ctrl+F dò lại đáp án trong slide gốc do sợ bị sai lệch kiến thức. |
 | **Impact** |Phá vỡ kế hoạch ôn tập, tốn thời gian cho việc rà soát thủ công, gây tâm lý bất an và dễ rơi vào bẫy "hiểu bài giả tạo" nếu chỉ học thuộc lòng đáp án do AI cung cấp. |
-| **Success Metric** (baseline → target, cách đo) |(1) Tổng thời gian có bộ đề 20 câu: từ 45 phút  dưới 3 phút ->(đo từ lúc upload). (2) Thời gian dò lại đáp án nghi ngờ: từ 30 phút -> dưới 5 phút (nhờ có sẵn số trang đính kèm). (3) Tỷ lệ câu hỏi không bịa đặt kiến thức (ảo giác): đạt >95% (đo qua report của sinh viên). |
+| **Success Metric** (baseline → target, cách đo) |(1) Tổng thời gian có bộ đề 20 câu: từ 45 phút xuống dưới 3 phút ->(đo từ lúc upload). (2) Thời gian dò lại đáp án nghi ngờ: từ 30 phút -> dưới 5 phút (nhờ có sẵn số trang đính kèm). (3) Tỷ lệ câu hỏi không bịa đặt kiến thức (ảo giác): đạt >95% (đo qua report của sinh viên). |
 | **Boundary** |AI tuyệt đối không được bịa đặt kiến thức ngoài tài liệu cung cấp (Grounding). AI không hiển thị ngay đáp án cuối cùng để chống học vẹt. Sinh viên (HITL) bắt buộc phải tự nhập/chọn đáp án trước khi hệ thống chấm điểm và cung cấp trích dẫn. |
 | **AI intervention point** |Tại bước đọc file bài giảng, tóm tắt ý chính và sáng tạo ra câu hỏi trắc nghiệm MCQ cùng 3 đáp án nhiễu. |
 | **Mức chọn** | Workflow (Cụ thể: RAG workflow kết hợp structured output JSON).|
