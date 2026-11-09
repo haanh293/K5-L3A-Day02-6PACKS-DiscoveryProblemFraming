@@ -210,19 +210,26 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** |Sinh viên đại học đang ôn thi |
-| **Quy trình** |1. Đọc lướt tài liệu - 2. Lên group xin đề - 3. Chờ đợi người gửi - 4. Lọc xem đề nào còn phù hợp giáo trình - 5. Tự làm và mò mẫm dò lại đáp án. |
-| **Bottleneck** |Mất từ vài giờ đến vài ngày chờ đợi nhưng không đảm bảo chất lượng. |
-| **Impact** | Mất nhiều thời gian tìm kiếm thay vì thực sự học; tâm lý bất an vì đề trôi nổi.|
-| **Success Metric** (baseline → target, cách đo) |Thời gian để có bộ đề 50 câu (kèm đáp án và giải thích) giảm từ vài giờ/ngày xuống dưới 3 phút. |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) |AI không được làm: Tự sáng tạo (hallucinate) kiến thức, thuật ngữ ngoài tài liệu cung cấp; không cam kết trúng đề thật. HITL: Sinh viên phải upload tài liệu chuẩn ban đầu; tự đối chiếu lại các câu hỏi tính toán/logic phức tạp; báo lỗi khi thấy đáp án mâu thuẫn để AI hiệu chỉnh dựa trên phản hồi. |
+| **Actor** | Sinh viên đang trong giai đoạn ôn thi. |
+| **Quy trình** | Sinh viên tự tìm kiếm đề thi cũ qua mạng xã hội, rà soát loại bỏ kiến thức lệch giáo trình, tự làm bài và lật giở lại tài liệu gốc để dò tìm đính chính đáp án. |
+| **Bottleneck** | Mất 1–2 ngày chờ đợi chia sẻ đề cũ một cách bị động. Tốn thêm 45 phút lọc bỏ kiến thức giảm tải và 30 phút lật từng trang tài liệu tự dò lời giải do đề trôi nổi thường sai hoặc không có đáp án chuẩn. |
+| **Impact** | Phá vỡ kế hoạch ôn tập, tốn nhiều thời gian cho các công việc không tạo ra kiến thức (tìm đề, lọc đề, dò đáp án), gây tâm lý bất an và dễ mắc bẫy hiểu bài giả tạo. |
+| **Success Metric** (baseline → target, cách đo) | (1) Thời gian có đề thực hành: từ 1–2 ngày xuống < 1 phút (đo từ lúc upload tài liệu đến khi có đề). (2) Thời gian xác minh đáp án: từ 30 phút xuống ngay lập tức (đo bằng tốc độ trả lời giải kèm trích dẫn). (3) Tỉ lệ khớp giáo trình: đạt > 95% (đo qua đánh giá của người dùng). |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI không được bịa đặt (hallucinate) hoặc suy diễn kiến thức ngoài tài liệu cung cấp. Sinh viên (HITL) sẽ tự đối chiếu và kiểm chứng lại đáp án thông qua tính năng bắt buộc AI trích dẫn nguồn tài liệu cụ thể (ví dụ: "Slide 15"). |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+### Phản biện từ AI: Mâu thuẫn ở hệ quả "Hiểu bài giả tạo" (Illusion of competence)
 
-AI phản biện người dùng (Actor): Quá rộng và ôm đồm
-Vấn đề: "Sinh viên đại học" là một tệp quá rộng. Khả năng xử lý của AI rất khác nhau tùy theo ngành học. AI làm rất tốt đề trắc nghiệm Luật, Quản trị kinh doanh, Lịch sử Đảng (thiên về text, khái niệm); nhưng sẽ dễ bị "ảo giác" (hallucinate) và tính toán sai với các môn như Giải tích, Cơ học lượng tử, hay Kế toán vĩ mô.
-Đề xuất: Thu hẹp Actor hoặc định rõ phạm vi (Scope). Ví dụ: "Sinh viên đại học khối ngành Kinh tế/Xã hội" hoặc quy định rõ AI chỉ hỗ trợ định dạng câu hỏi lý thuyết, khái niệm, tình huống (case study), không hỗ trợ giải phương trình hay tính toán phức tạp ở giai đoạn 1.
-=> Nhóm đồng ý với phản biện này.
+**1. Nội dung phản biện:**
+Ở phần Impact, dự án có đề cập đến việc cách học cũ gây "hiểu bài giả tạo". Tuy nhiên, nếu AI cung cấp đáp án ngay lập tức kèm trích dẫn (như định hướng ở Success Metric 2), sinh viên rất dễ rơi vào bẫy ỷ lại: Đọc câu hỏi ➔ Xem ngay đáp án của AI ➔ Thấy hợp lý ➔ Tự nghĩ rằng mình đã hiểu bài. Điều này vô tình làm tình trạng "hiểu bài giả tạo" trở nên trầm trọng hơn.
+
+**2. Quyết định của nhóm:**
+Đồng ý.
+
+**3. Cách giải quyết:**
+*   **Điều chỉnh UX/Luồng tính năng:** Hệ thống sẽ không hiển thị ngay đáp án cuối cùng.
+*   **Tương tác bắt buộc (HITL):** Sinh viên bắt buộc phải tự nhập câu trả lời hoặc chọn đáp án trước.
+*   **Cung cấp Hint (Gợi ý):** Khi AI chấm bài, nếu sinh viên làm sai, hệ thống chỉ đưa ra gợi ý hoặc trích xuất đoạn tài liệu cần đọc lại (ví dụ: *"Xem lại định nghĩa ở Slide 15"*) trước khi cung cấp đáp án hoàn chỉnh.
 
 ---
 
