@@ -10,7 +10,7 @@
 - MSSV: 2A202603644
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: 6PACKS 
-- Link repo nhóm: https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming/blob/main/docs/01-worksheet.md
+- Link repo nhóm: https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming
 
 ---
 
