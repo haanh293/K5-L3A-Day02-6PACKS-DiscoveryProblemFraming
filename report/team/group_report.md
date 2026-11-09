@@ -152,10 +152,10 @@ Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
 |:---:|:---|:---|:---|:---|:---|
 | **1** | Sinh viên ôn thi | Slide bài giảng, file PDF/Word giáo trình | Danh sách các chương, khái niệm chính cần ôn | 30 phút / 1–2 tuần trước kỳ thi | Đọc thụ động, tạo cảm giác hiểu bài giả tạo (illusion of competence). |
 | **2** | Sinh viên ôn thi | Nhu cầu tìm đề thực hành | Tin nhắn/bài đăng trên nhóm Zalo, Facebook, diễn đàn | 15 phút / Mỗi môn học | Đăng bài hỏi xin đề thi thử, file quiz cũ của các khóa trước. |
-| **3** | Người cho đề, Sinh viên | Bài đăng hỏi xin đề | Tệp đề cũ (hoặc không nhận được phản hồi) | **1 – 2 ngày** (chờ đợi) | **Bị động hoàn toàn:** Nếu có người gửi thì qua B4; nếu không ai gửi thì buộc phải tự mò mẫm đọc lại slide (chuyển thẳng B6). |
-| **4** | Sinh viên ôn thi | Các tệp đề cũ thu thập được, giáo trình hiện tại | Bộ câu hỏi lọc sơ bộ còn đúng chương trình học | **45 phút** / Mỗi đợt xin được đề | **Tốn công rà soát:** Phải loại bỏ các câu thuộc chương trình cũ đã giảm tải hoặc đổi giáo trình. |
-| **5** | Sinh viên ôn thi | Bộ câu hỏi đã lọc | Bài làm với các đáp án đã chọn | **30 phút** / Mỗi lần làm thử | Làm bài trong tâm lý bất an vì không chắc đề có chuẩn và có đáp án đúng đi kèm hay không. |
-| **6** | Sinh viên ôn thi | Bài làm, tài liệu/slide bài giảng gốc | Điểm số và danh sách câu sai đã được kiểm chứng | **30 phút** / Mỗi bài test | **Vòng lặp sửa sai:** Đề cũ thường thiếu đáp án chuẩn hoặc giải sai, sinh viên phải tự lật từng trang slide để dò; nếu sai lệch quá nhiều lại phải quay lại lọc đề khác (về B4). |
+| **3** | Người cho đề, Sinh viên | Bài đăng hỏi xin đề | Tệp đề cũ (hoặc không nhận được phản hồi) | 1 – 2 ngày (chờ đợi) | Bị động hoàn toàn: Nếu có người gửi thì qua B4; nếu không ai gửi thì buộc phải tự mò mẫm đọc lại slide (chuyển thẳng B6). |
+| **4** | Sinh viên ôn thi | Các tệp đề cũ thu thập được, giáo trình hiện tại | Bộ câu hỏi lọc sơ bộ còn đúng chương trình học | 45 phút / Mỗi đợt xin được đề | Tốn công rà soát: Phải loại bỏ các câu thuộc chương trình cũ đã giảm tải hoặc đổi giáo trình. |
+| **5** | Sinh viên ôn thi | Bộ câu hỏi đã lọc | Bài làm với các đáp án đã chọn | 30 phút / Mỗi lần làm thử | Làm bài trong tâm lý bất an vì không chắc đề có chuẩn và có đáp án đúng đi kèm hay không. |
+| **6** | Sinh viên ôn thi | Bài làm, tài liệu/slide bài giảng gốc | Điểm số và danh sách câu sai đã được kiểm chứng | 30 phút / Mỗi bài test | Vòng lặp sửa sai: Đề cũ thường thiếu đáp án chuẩn hoặc giải sai, sinh viên phải tự lật từng trang slide để dò; nếu sai lệch quá nhiều lại phải quay lại lọc đề khác (về B4). |
 
 
 **Bottleneck chính:**
@@ -174,11 +174,11 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Bước | Tên bước | Loại hình | Tác tử (Actor) | Input $\rightarrow$ Output | Chi tiết thao tác & Ranh giới |
 |:---:|:---|:---:|:---|:---|:---|
-| **1** | Tải tài liệu học tập | **Con người** | Sinh viên | Slide PDF, file giáo trình $\rightarrow$ File thô trên hệ thống | Sinh viên kéo thả file bài giảng (PDF/Docx), chọn số lượng câu hỏi và phạm vi ôn tập. |
-| **2** | Tiền xử lý & Trích xuất văn bản | **Rule** | Hệ thống (Parser) | File PDF thô $\rightarrow$ Clean text chunks kèm Page ID | Hệ thống bóc tách text, lọc bỏ trang bìa/mục lục, chia chunk (500–1000 tokens) và gắn metadata số trang. |
-| **3** | Sinh câu hỏi & Trích dẫn nguồn | **AI** | LLM Engine (RAG) | Clean text chunks $\rightarrow$ Bộ câu hỏi MCQ (JSON) | LLM đọc ngữ cảnh, nhận diện khái niệm chính, sinh 4 lựa chọn (1 đúng, 3 nhiễu) kèm trích dẫn số trang/đoạn văn gốc (grounding). |
-| **4** | Kiểm định cấu trúc & Cú pháp | **Rule** | Hệ thống (Validator) | JSON từ AI $\rightarrow$ Bộ đề hợp lệ trên UI | Kiểm tra schema JSON, đủ 4 đáp án A-B-C-D, đáp án đúng duy nhất. Nếu hợp lệ thì render lên giao diện làm bài. |
-| **5** | Làm bài & Đối soát kiến thức | **Con người** | Sinh viên | Giao diện câu hỏi $\rightarrow$ Kết quả & Insight ôn tập | Sinh viên làm bài chủ động; hệ thống chấm điểm tức thì, xem lời giải và đoạn trích slide đối soát. |
+| **1** | Tải tài liệu học tập | Con người | Sinh viên | Slide PDF, file giáo trình $\rightarrow$ File thô trên hệ thống | Sinh viên kéo thả file bài giảng (PDF/Docx), chọn số lượng câu hỏi và phạm vi ôn tập. |
+| **2** | Tiền xử lý & Trích xuất văn bản | Rule | Hệ thống (Parser) | File PDF thô $\rightarrow$ Clean text chunks kèm Page ID | Hệ thống bóc tách text, lọc bỏ trang bìa/mục lục, chia chunk (500–1000 tokens) và gắn metadata số trang. |
+| **3** | Sinh câu hỏi & Trích dẫn nguồn | AI | LLM Engine (RAG) | Clean text chunks $\rightarrow$ Bộ câu hỏi MCQ (JSON) | LLM đọc ngữ cảnh, nhận diện khái niệm chính, sinh 4 lựa chọn (1 đúng, 3 nhiễu) kèm trích dẫn số trang/đoạn văn gốc (grounding). |
+| **4** | Kiểm định cấu trúc & Cú pháp | Rule | Hệ thống (Validator) | JSON từ AI $\rightarrow$ Bộ đề hợp lệ trên UI | Kiểm tra schema JSON, đủ 4 đáp án A-B-C-D, đáp án đúng duy nhất. Nếu hợp lệ thì render lên giao diện làm bài. |
+| **5** | Làm bài & Đối soát kiến thức | Con người | Sinh viên | Giao diện câu hỏi $\rightarrow$ Kết quả & Insight ôn tập | Sinh viên làm bài chủ động; hệ thống chấm điểm tức thì, xem lời giải và đoạn trích slide đối soát. |
 
 #### Phân định ranh giới (Boundaries)
 * **Human Boundary (Con người):** Chỉ tham gia ở hai đầu mút: cung cấp tài liệu đầu vào (Bước 1) và thực hành làm bài, đối soát kết quả đầu ra (Bước 5).
@@ -236,10 +236,10 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 ### 6. Mức can thiệp AI (CP6)
 
 #### 6.1. Ma trận độ mơ hồ × độ phức tạp
-* **Bài của nhóm nằm ở ô:** **mơ hồ cao — phức tạp thấp (high ambiguity, low complexity)**.
+* **Bài của nhóm nằm ở ô:** Mơ hồ cao — Phức tạp thấp (High ambiguity, Low complexity).
 * **Vì sao:** 
-  * *mơ hồ cao:* việc đọc hiểu ngữ nghĩa bài giảng, tóm tắt ý chính và sáng tạo ra các "đáp án nhiễu" (distractors) hợp lý đòi hỏi khả năng xử lý ngôn ngữ tự nhiên linh hoạt, không thể viết bằng các quy tắc if/else truyền thống.
-  * *phức tạp thấp:* luồng công việc rất tuyến tính và cố định (upload file $\rightarrow$ chia chunk $\rightarrow$ sinh JSON câu hỏi $\rightarrow$ làm bài), không cần AI phải lập kế hoạch nhiều bước (reasoning) hay tương tác với môi trường bên ngoài.
+  * *Mơ hồ cao:* việc đọc hiểu ngữ nghĩa bài giảng, tóm tắt ý chính và sáng tạo ra các "đáp án nhiễu" (distractors) hợp lý đòi hỏi khả năng xử lý ngôn ngữ tự nhiên linh hoạt, không thể viết bằng các quy tắc if/else truyền thống.
+  * *Phức tạp thấp:* luồng công việc rất tuyến tính và cố định (upload file $\rightarrow$ chia chunk $\rightarrow$ sinh JSON câu hỏi $\rightarrow$ làm bài), không cần AI phải lập kế hoạch nhiều bước (reasoning) hay tương tác với môi trường bên ngoài.
 
 ---
 
@@ -249,10 +249,10 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 |:---|:---|:---|:---|:---:|
 | **no AI** (sửa quy trình) | Xin giảng viên ngân hàng đề hoặc tự gõ flashcard thủ công (Quizlet/Anki). | Thi các môn có sẵn ngân hàng đề công khai trên mạng. | Mất nhiều thời gian; rủi ro học nhầm đề cũ lệch giáo trình. | Không |
 | **rule** | Dùng Regex quét các từ in đậm/gạch chân trong file Word và làm bài tập "điền vào chỗ trống". | Chỉ cần học thuộc lòng từ vựng rời rạc. | Câu hỏi ngô nghê, không tạo được câu hỏi tư duy trắc nghiệm 4 đáp án. | Không |
-| **workflow** | LLM đọc các chunk văn bản, trích xuất ý chính và sinh JSON (MCQ) bám sát nội dung, con người làm bài và rà soát. | Cần tạo đề thi thử nhanh, chính xác, sát tài liệu cá nhân. | AI sinh lỗi JSON hoặc bịa kiến thức (ảo giác). | **Có** |
+| **workflow** | LLM đọc các chunk văn bản, trích xuất ý chính và sinh JSON (MCQ) bám sát nội dung, con người làm bài và rà soát. | Cần tạo đề thi thử nhanh, chính xác, sát tài liệu cá nhân. | AI sinh lỗi JSON hoặc bịa kiến thức (ảo giác). | Có |
 | **agent** | AI tự lên lịch học, tự tra cứu web, ép sinh viên làm bài và tự điều chỉnh độ khó. | Cần một "gia sư ảo" kèm cặp toàn diện. | Over-engineering; khó kiểm soát chất lượng; sai mục tiêu "cần bộ đề ngay". | Không |
 
-* **Mức chọn:** **workflow (cụ thể là RAG workflow kết hợp structured output).**
+* **Mức chọn:** workflow (cụ thể là RAG workflow kết hợp structured output).
 * **Vì sao không chọn mức đơn giản hơn:** Các mức no AI và rule-based không thể hiểu được ngữ cảnh chuyên ngành để tóm tắt thành câu hỏi và không đủ khả năng sáng tạo ra 3 đáp án nhiễu hợp logic để đánh lừa sinh viên.
 
 ---
@@ -277,7 +277,7 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
   * **Bằng chứng:** Sinh viên không cần một con AI "đi thi hộ" hay "tự học thay". Họ cần một công cụ đóng vai trò như người trợ giảng, xử lý khâu lao động chân tay (lọc đề, gõ câu hỏi) để họ có tài liệu luyện tập nhanh nhất. Việc tiếp thu kiến thức và chọn đáp án cuối cùng bắt buộc phải do sinh viên thực hiện.
 
 * **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót?**
-  * **Đáp án:** **báo nhầm (false positive / ảo giác kiến thức)** tệ hơn rất nhiều so với bỏ sót (false negative).
+  * **Đáp án:** báo nhầm (false positive / ảo giác kiến thức) tệ hơn rất nhiều so với bỏ sót (false negative).
   * **Vì sao:** Nếu AI bỏ sót một vài đoạn văn không tạo câu hỏi, sinh viên lật slide vẫn có thể tự đọc bù. Nhưng nếu AI "báo nhầm" bằng cách tự bịa ra một kiến thức sai lệch mà slide không hề dạy, sinh viên học vẹt theo sẽ làm sai bài thi thật, dẫn đến hậu quả nghiêm trọng về điểm số và mất hoàn toàn niềm tin vào sản phẩm.
   * **Thiết kế đã xử lý thế nào:** 
     1. Ép framework RAG chỉ được lấy thông tin trong chunk (grounding). 
