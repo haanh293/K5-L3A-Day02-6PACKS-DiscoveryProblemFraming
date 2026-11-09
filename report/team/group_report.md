@@ -29,8 +29,7 @@
 | 9 |2A202603641_NguyenSyHuyKien |Khi viết tổng quan nghiên cứu, tôi muốn biết nhanh bài nào thực sự dùng được để ưu tiên đọc kỹ, thay vì đọc hết.|Sinh viên năm cuối làm đồ án tốt nghiệp |đọc abstract sàng lọc ,đọc sâu|"Vấn đề đọc có thể sử dụng AI, bottleneck thực sự nằm ở việc tìm kiếm tài liệu ?"(2A202603636_HoangDangKien) |
 | 10 |2A202603641_NguyenSyHuyKien |Khi có nhiều tài liệu tham khảo, tôi muốn trích dẫn tự động đúng chuẩn để không phải chỉnh từng dòng bằng tay.|Sinh viên làm đồ án, báo cáo.|gõ tay theo chuẩn ,sửa khi bị góp ý |"Nếu nhiều phần trích dẫn có nội dung tương đồng thì sẽ xử lý thế nào ? " (2A202603644_NguyenDucTrong)|
 | 11 |2A202603644_NguyenDucTrong|Khi có bảng dữ liệu mới về,muốn có bộ test chất lượng chạy được ngay, để lỗi dữ liệu không lọt vào báo cáo. |Data/analytics engineer |Bước khảo sát dữ liệu và viết test dbt thủ công cho từng bảng, từng cột|"Great Expectations đã sinh test tự động, sao tool hiểu được nghiệp vụ bảng dữ liệu?" (2A202603641_NguyenSyHuyKien)|
-| 12 |2A202603644_NguyenDucTrong |Khi chuẩn bị buổi dạy kèm Toán, muốn có bài tập đúng điểm yếu của học sinh và biết lỗi sai nào lặp lại, để buổi học tập trung đúng chỗ. |Gia sư, học sinh(học tại nhà) |Tìm và chọn bài đúng điểm yếu và tổng hợp lỗi sai lặp lại
-LLM thỉnh thoảng giải/ra đề Toán sai, làm sao bảo đảm đề đúng?|"Thu thập dữ liệu nháp của học sinh bằng cách nào để AI biết đúng lỗi sai?" (2A202603605_NguyenHaAnh) |
+| 12 |2A202603644_NguyenDucTrong |Khi chuẩn bị buổi dạy kèm Toán, muốn có bài tập đúng điểm yếu của học sinh và biết lỗi sai nào lặp lại, để buổi học tập trung đúng chỗ. |Gia sư, học sinh(học tại nhà) |Tìm và chọn bài đúng điểm yếu và tổng hợp lỗi sai lặp lại LLM thỉnh thoảng giải/ra đề Toán sai, làm sao bảo đảm đề đúng?|"Thu thập dữ liệu nháp của học sinh bằng cách nào để AI biết đúng lỗi sai?" (2A202603605_NguyenHaAnh) |
 
 ### 2.2. Cluster
 
