@@ -82,7 +82,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
  
  #11 (Sinh bộ test dữ liệu): Điểm số cao thứ nhì và nghiệp vụ rất rõ, nhưng cần dựng mock database phức tạp và khó chuẩn hóa dataset chuẩn để demo kiểm thử trong thời gian lab.
 
-**Xử lý bất đồng (nếu có):Nhóm có tranh luận giữa chọn #7 (dễ làm, tệp người dùng rộng) và #11 (tính kỹ thuật và giá trị kỹ sư cao hơn). Nhóm thống nhất chọn #7 để hoàn thành trọn vẹn trong thời hạn lab vì có sẵn tài liệu/slide để đo lường độ chính xác ngay, còn #11 sẽ đưa vào mục hướng phát triển tiếp theo.**
+**Xử lý bất đồng (nếu có):** Nhóm có tranh luận giữa chọn #7 (dễ làm, tệp người dùng rộng) và #11 (tính kỹ thuật và giá trị kỹ sư cao hơn). Nhóm thống nhất chọn #7 để hoàn thành trọn vẹn trong thời hạn lab vì có sẵn tài liệu/slide để đo lường độ chính xác ngay, còn #11 sẽ đưa vào mục hướng phát triển tiếp theo.
 
 ---
 
