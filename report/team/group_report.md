@@ -322,22 +322,28 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? |Thấp |Nhu cầu thực tế lớn |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? |Trung Bình |Người dùng có thể dùng được, có thể hiểu nhưng không sửa được đầu ra của AI |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? |Trung Bình |Nguồn dữ liệu dồi dào, cung cụ đầy, độ khó phụ thuộc vào loại tài liệu |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Cao |Chi phí vận hành lớn |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** Not Yet
 
 **Lý do:**
 
-**Nếu Go — pilot nhỏ nhất:**
+Dự án được đánh giá là **hoàn toàn khả thi về mặt kỹ thuật và có giá trị thực tiễn rất cao**:
+* **Nhu cầu rõ ràng (Value):** Sinh viên có nhu cầu cấp thiết về việc tạo đề trắc nghiệm chủ động từ tài liệu học tập để phục vụ ôn thi.
+* **Kỹ thuật trong tầm tay (Feasibility):** Công nghệ hiện tại (RAG kết hợp LLM) đã đủ trưởng thành để bóc tách slide và sinh câu hỏi trắc nghiệm kèm trích dẫn nguồn với độ chính xác cao.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
-
-**Nếu No-Go — nên làm gì thay AI:**
+**Rào cản then chốt khiến dự án phải dừng ở mức Not Yet:**
+Dự án chưa thể bấm nút "Go" ngay lúc này vì vướng phải bài toán **chi phí vận hành và bài toán đầu tư tài chính (Viability)**:
+1. **Gánh nặng chi phí API quá lớn:** Mỗi lượt sinh bộ câu hỏi đòi hỏi đọc hàng chục slide, chia chunk và gọi LLM xử lý context dài, tiêu tốn lượng token đáng kể. Với đối tượng người dùng là sinh viên (khả năng chi trả thấp hoặc chỉ quen dùng miễn phí), chi phí API sẽ nhanh chóng vượt quá khả năng tự duy trì của nhóm nếu lượng người dùng tăng đột biến.
+2. **Thiếu nguồn lực đầu tư ban đầu:** Nhóm chưa có nguồn vốn tài trợ hoặc phương án doanh thu khả thi để trang trải hạ tầng máy chủ, chi phí token và công cụ bóc tách OCR chất lượng cao cho các tài liệu scan/hình ảnh.
+3. **Cần thời gian kiểm chứng giải pháp tối ưu chi phí:** Dự án không bị hủy bỏ hoàn toàn ("No Go") mà được xếp vào "Not Yet" để nhóm có thời gian nghiên cứu các giải pháp tiết kiệm hơn trước khi ra mắt chính thức:
+   * Chuyển sang thử nghiệm các mô hình mã nguồn mở gọn nhẹ chạy local (SLM / Open-source LLM) để cắt giảm phụ thuộc vào API thương mại đắt đỏ.
+   * Xây dựng cơ chế semantic caching (lưu trữ và tái sử dụng câu hỏi của các môn học chung giữa nhiều sinh viên) để giảm thiểu số lượt gọi LLM lặp lại.
 
 **Ngưỡng dừng** (nếu sau … mà … thì quay về …):
 
@@ -347,6 +353,41 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 -
 
+###9.1. Hạn chế của hệ thống
+
+1. **Phụ thuộc vào chất lượng và định dạng tài liệu đầu vào:**
+   * Hệ thống xử lý tốt nhất với tài liệu văn bản thuần túy (PDF vector, Word). Với slide bài giảng chứa nhiều sơ đồ, hình vẽ, bảng số liệu hoặc PDF dạng ảnh scan, bộ bóc tách văn bản (parser) dễ bị mất dữ liệu nếu không có OCR chuyên sâu.
+   * Các slide có quá ít chữ hoặc chỉ chứa từ khóa rời rạc không đủ ngữ cảnh để LLM suy luận và sinh câu hỏi trắc nghiệm chất lượng.
+
+2. **Gánh nặng chi phí token và độ trễ:**
+   * Việc chunking và gửi toàn bộ nội dung giáo trình dài lên các API thương mại tiêu tốn lượng token lớn và tạo độ trễ xử lý (30–90 giây), khó mở rộng quy mô nếu không có nguồn tài trợ hạ tầng.
+
+3. **Khả năng tạo câu hỏi tư duy và tính toán còn hạn chế:**
+   * Mô hình làm rất tốt các câu hỏi dạng nhận biết và định nghĩa lý thuyết, nhưng dễ sinh lỗi ở các câu hỏi đòi hỏi tính toán công thức số học, giải mã thuật toán hoặc suy luận logic nhiều bước.
+
+4. **Trải nghiệm người dùng chưa khép kín:**
+   * Giao diện hiện tại chưa hỗ trợ trình biên tập để người học tự chỉnh sửa trực tiếp câu hỏi hoặc sửa đáp án sai của AI trước khi bắt đầu làm bài.
+
+---
+
+### 9.2. Hướng phát triển tiếp theo 
+
+1. **Tối ưu chi phí và hạ tầng mô hình:**
+   * Nghiên cứu chuyển đổi từ các API thương mại đắt đỏ sang các mô hình mã nguồn mở gọn nhẹ (SLM như Llama 3, Qwen) có thể tự host hoặc chạy trên môi trường cục bộ để đưa chi phí vận hành về mức tối thiểu.
+   * Xây dựng cơ chế bộ nhớ đệm ngữ nghĩa (semantic caching): lưu trữ và tái sử dụng ngân hàng câu hỏi đã qua kiểm duyệt cho các môn học chung, tránh gọi LLM sinh lặp lại cùng một nội dung slide.
+
+2. **Nâng cấp năng lực xử lý đa phương thức (Multimodal):**
+   * Tích hợp Vision-Language Model hoặc OCR nâng cao để đọc hiểu trực tiếp bảng biểu, sơ đồ kiến trúc và công thức toán học trên slide bài giảng.
+
+3. **Hoàn thiện vòng lặp phản hồi (Human-in-the-loop UX):**
+   * Phát triển tính năng cho phép sinh viên trực tiếp sửa câu hỏi, tùy chỉnh độ khó (nhận biết, thông hiểu, vận dụng) và chọn số lượng câu hỏi theo từng chương cụ thể.
+   * Tận dụng dữ liệu câu hỏi được người dùng gắn cờ (báo lỗi/đánh giá tốt) để xây dựng tập dữ liệu mẫu chuẩn (few-shot dataset), phục vụ việc tinh chỉnh prompt hoặc đánh giá tự động (LLM-as-a-judge) cho các phiên bản tiếp theo.
+
 ## 10. Tài liệu tham khảo
 
--
+- Lean UX: Designing Great Products with Agile Teams (Jeff Gothelf & Josh Seiden).
+- The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you (Rob Fitzpatrick).
+- Opportunity Solution Tree Framework (Teresa Torres, Continuous Discovery Habits).
+- Building Effective Agents & AI Workflows Guide (Anthropic, 2024).
+- People + AI Guidebook (Google PAIR).
+- Inspired & Empowered: Product Risk Framework (Marty Cagan, Silicon Valley Product Group).
