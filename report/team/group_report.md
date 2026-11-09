@@ -334,27 +334,28 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 **Lý do:**
 
-Dự án được đánh giá là **hoàn toàn khả thi về mặt kỹ thuật và có giá trị thực tiễn rất cao**:
+Dự án được đánh giá là hoàn toàn khả thi về mặt kỹ thuật và có giá trị thực tiễn rất cao:
 * **Nhu cầu rõ ràng (Value):** Sinh viên có nhu cầu cấp thiết về việc tạo đề trắc nghiệm chủ động từ tài liệu học tập để phục vụ ôn thi.
 * **Kỹ thuật trong tầm tay (Feasibility):** Công nghệ hiện tại (RAG kết hợp LLM) đã đủ trưởng thành để bóc tách slide và sinh câu hỏi trắc nghiệm kèm trích dẫn nguồn với độ chính xác cao.
 
 **Rào cản then chốt khiến dự án phải dừng ở mức Not Yet:**
-Dự án chưa thể bấm nút "Go" ngay lúc này vì vướng phải bài toán **chi phí vận hành và bài toán đầu tư tài chính (Viability)**:
+Dự án chưa thể bấm nút "Go" ngay lúc này vì vướng phải bài toán chi phí vận hành và bài toán đầu tư tài chính (Viability):
 1. **Gánh nặng chi phí API quá lớn:** Mỗi lượt sinh bộ câu hỏi đòi hỏi đọc hàng chục slide, chia chunk và gọi LLM xử lý context dài, tiêu tốn lượng token đáng kể. Với đối tượng người dùng là sinh viên (khả năng chi trả thấp hoặc chỉ quen dùng miễn phí), chi phí API sẽ nhanh chóng vượt quá khả năng tự duy trì của nhóm nếu lượng người dùng tăng đột biến.
 2. **Thiếu nguồn lực đầu tư ban đầu:** Nhóm chưa có nguồn vốn tài trợ hoặc phương án doanh thu khả thi để trang trải hạ tầng máy chủ, chi phí token và công cụ bóc tách OCR chất lượng cao cho các tài liệu scan/hình ảnh.
-3. **Cần thời gian kiểm chứng giải pháp tối ưu chi phí:** Dự án không bị hủy bỏ hoàn toàn ("No Go") mà được xếp vào "Not Yet" để nhóm có thời gian nghiên cứu các giải pháp tiết kiệm hơn trước khi ra mắt chính thức:
+3. **Cần thời gian kiểm chứng giải pháp tối ưu chi phí:** Dự án không bị hủy bỏ hoàn toàn "No Go" mà được xếp vào "Not Yet" để nhóm có thời gian nghiên cứu các giải pháp tiết kiệm hơn trước khi ra mắt chính thức:
    * Chuyển sang thử nghiệm các mô hình mã nguồn mở gọn nhẹ chạy local (SLM / Open-source LLM) để cắt giảm phụ thuộc vào API thương mại đắt đỏ.
    * Xây dựng cơ chế semantic caching (lưu trữ và tái sử dụng câu hỏi của các môn học chung giữa nhiều sinh viên) để giảm thiểu số lượt gọi LLM lặp lại.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
-
+**Ngưỡng dừng**:
+* Nếu sau 4 tuần thử nghiệm tối ưu hóa (chuyển sang mô hình mã nguồn mở SLM chạy local kết hợp Semantic Caching) mà chi phí vận hành vẫn vượt quá 500 vnđ / bộ 20 câu hỏi, hoặc tỷ lệ câu hỏi không ảo giác tụt xuống dưới 85% (không đạt ngưỡng chất lượng >95% ở mục 7), thì quay về quyết định No-Go để tránh lãng phí nguồn lực.   
+ 
+* Nếu sau 2 sprint phát triển mà nhóm vẫn chưa xây dựng được tính năng cho phép sinh viên tự chỉnh sửa hoặc báo lỗi trực tiếp câu hỏi (rào cản Usability), thì quay về mức can thiệp rule-based hoặc no ai (cung cấp Template cấu trúc hóa ghi chú và hướng dẫn sinh viên tự tạo bộ câu hỏi thủ công trên Anki/Quizlet) thay vì tiếp tục phụ thuộc vào luồng sinh tự động của LLM.  
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
 
-###9.1. Hạn chế của hệ thống
+### 9.1. Hạn chế của hệ thống
 
 1. **Phụ thuộc vào chất lượng và định dạng tài liệu đầu vào:**
    * Hệ thống xử lý tốt nhất với tài liệu văn bản thuần túy (PDF vector, Word). Với slide bài giảng chứa nhiều sơ đồ, hình vẽ, bảng số liệu hoặc PDF dạng ảnh scan, bộ bóc tách văn bản (parser) dễ bị mất dữ liệu nếu không có OCR chuyên sâu.
