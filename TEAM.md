@@ -185,3 +185,33 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - Biết cách xác định đúng mức can thiệp AI (chọn RAG Workflow thay vì over-engineer lên Agent) và thiết kế cơ chế Human-in-the-loop để kiểm soát lỗi ảo giác.
 - Thấu hiểu việc ra quyết định Not Yet: dù giải pháp khả thi kỹ thuật và nhu cầu cao, vẫn phải tạm dừng nếu rủi ro chi phí token và khả năng chỉnh sửa của người dùng chưa được tối ưu.
+
+### NguyenDucTrong-2A202603644
+
+**Phần việc phụ trách:**
+
+- Phụ trách Đánh giá (Eval & Risk).
+- Người chính tại CP5 (Problem Statement v0): Định nghĩa bài toán, Actor, Bottleneck và Success Metric, phối hợp cùng Nguyễn Hà Anh.
+- Hỗ trợ CP6 (Quyết định): Tham gia đánh giá 4 rủi ro, đặc biệt tập trung vào khía cạnh Viability (chi phí vận hành) để đưa ra quyết định Go/Not Yet.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Tại CP3, đóng góp 2 candidate (#11 Sinh test data tự động và #12 Soạn đề Toán cá nhân hóa), mang đến góc nhìn từ mảng Data Engineering và kinh nghiệm gia sư thực tế.
+- Đặt câu hỏi phản biện cốt lõi cho Candidate #7 (Tạo bộ câu hỏi ôn tập): *"Làm sao đảm bảo AI không sinh ra câu hỏi sai kiến thức (hallucination) khiến người học sai theo?"*, từ đó định hình tư duy thiết lập Boundary và HITL cho nhóm.
+- Chịu trách nhiệm chính viết Problem Statement v0 (CP5): Lọc bỏ các từ ngữ mang tính giải pháp công nghệ (solution-oriented), giữ nguyên trạng thái mô tả nỗi đau nghiệp vụ và định lượng Success Metric rõ ràng (Giảm từ 45 phút xuống dưới 3 phút, tỷ lệ chính xác $\ge 90\%$).
+- Tại CP6, phân tích rủi ro hệ thống dưới lăng kính dữ liệu: chỉ ra rủi ro "Lost in the middle" khi đẩy các file slide dài vào LLM và tính toán sơ bộ chi phí token API, từ đó củng cố lập luận vững chắc cho quyết định "Not Yet" của nhóm.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `group_report.md` mục 2 (CP3): Bảng pitch (dòng #11, #12 — mình pitch), cột câu hỏi phản biện.
+- `group_report.md` mục 5 (Problem Statement v0): Chịu trách nhiệm draft chính các nội dung Actor, Bottleneck, Impact và Success Metric.
+- `group_report.md` mục 8 (Quyết định): Đóng góp nội dung đánh giá rủi ro Viability (chi phí token) và Feasibility (chunking data).
+- Các commit thực hiện dưới tài khoản GitHub `fishiousrend05`.
+
+**Điều mình học được từ phần nhóm:**
+
+- Nhận ra sự khác biệt lớn giữa việc "nghĩ ra một giải pháp công nghệ hay" và "tìm ra một vấn đề đáng để giải". Dù có background làm Data Engineer và có xu hướng nhìn vào hệ thống (backend/data pipeline), tôi học được cách nhượng bộ và chọn bài toán giáo dục của nhóm vì nó có tệp user thực tế đông đảo và nỗi đau lặp lại đủ lớn để kiểm chứng ngay.
+- - Hiểu được sự cám dỗ của tư duy "Solution-first". Khi làm OST, cả nhóm rất dễ sa đà vào việc thiết kế tính năng (RAG, Chatbot) thay vì tập trung vào Opportunity (Nỗi đau thực sự). 
+- Nhận thức rõ ràng rằng chi phí vận hành (Viability) là một rào cản thực tế khổng lồ. Dù giải pháp (Workflow) có khả thi về mặt kỹ thuật, nhưng nếu chi phí token API xử lý tài liệu lớn quá đắt đỏ so với ngân sách sinh viên thì dự án vẫn phải nhận quyết định "Not Yet".
+
+(NOTES : TRONG QUÁ TRÌNH NHÓM THỰC HIỆN EDIT CÁC FILE BÁO CÁO CHUNG NHƯ group_report.md HAY TEAM.md , ĐỂ TRÁNH BỊ CONFLICT KHI CÙNG SỬA MỘT FILE NÊN NHÓM CHỈ CỬ RA MỘT SỐ THÀNH VIÊN ĐỂ EDIT NỘI DUNG CHO CÁC FILE BÁO CÁO CHUNG NÀY.)
