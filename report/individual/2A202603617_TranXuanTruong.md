@@ -142,16 +142,16 @@ HIỆN TẠI — 80 phút/tuần
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch Card #1 (Viết Release note cho PR/commit) và Card #2 (Action items sau họp tuần) | Đóng góp 2 candidate vào bảng pitch chung của nhóm; Card #1 đạt điểm cao và lọt vào shortlist cân nhắc của nhóm |
+| Phản biện bài của bạn khác | Đặt câu hỏi cho bài #2 của Hà Anh (Lưu log ML): "Nếu giải pháp đơn giản là ghi log ra CSV thì có giải quyết được việc so sánh nhiều model cùng lúc hay chỉ chuyển khó khăn sang việc đọc file CSV khổng lồ?"; Đặt câu hỏi cho bài #5 của Tuấn (Đối chiếu deadline): "Vấn đề nằm ở thiếu công cụ hay do tính chủ động khi đã có Google Calendar/Notion?" | Giúp nhóm nhận diện được các rào cản về phạm vi và tính khả thi của các candidate, loại bỏ giải pháp mang tính chủ quan |
+| Nhận phản biện | Hà Anh hỏi: "GitHub đã có sẵn nút auto-generate release notes từ tên PR, tại sao vẫn cần công cụ riêng?"; Tuấn hỏi: "Bot họp như Otter/Fireflies đã có tóm tắt, bài toán có còn chỗ trống không?" | Giải trình rõ: Auto-generate của GitHub chỉ liệt kê commit thô kỹ thuật, không tổng hợp được narrative nghiệp vụ cho người dùng/QA; bổ sung ranh giới Workflow cho bài toán |
+| Gom cluster / cây OST | Cùng nhóm phân loại 12 candidate thành 4 cụm; đưa Card #1 vào Cụm C (Kỹ thuật/MLOps) và Card #2 vào Cụm D (Quản trị công việc); tham gia xây dựng Opportunity Tree | Thống nhất Outcome chung của nhóm hướng tới việc tối ưu hóa thời gian chuẩn bị và học tập ôn thi |
+| Chọn candidate problem | Tham gia chấm điểm shortlist theo 7 tiêu chí; thảo luận so sánh giữa Candidate #7 (Tạo câu hỏi trắc nghiệm ôn tập) và #11 (Sinh bộ test data) | Đồng thuận chọn Candidate #7 vì có tệp người dùng trực tiếp, có sẵn slide/tài liệu để kiểm chứng ngay trong buổi lab |
+| Kiểm chứng / research | Đóng góp ý kiến xây dựng Assumption Map (tập trung vào giả định AI hallucinate sinh câu hỏi/đáp án sai lệch); rà soát các công cụ sinh câu hỏi từ tài liệu hiện có (Quizlet, Anki, Quizgecko) | Giúp nhóm xác định rõ khoảng trống: các tool hiện tại thường sinh câu hỏi bề mặt hoặc trích nguyên văn, thiếu khả năng phân loại theo mức độ Bloom và bám sát slide giáo trình |
+| Quy trình nhóm | Đóng góp xây dựng quy trình tương lai (Future Workflow) và đề xuất bước Human-in-the-loop (Sinh viên soát lại câu hỏi trước khi học) | Đảm bảo quy trình có boundary rõ ràng và có phương án quay về (fallback) nếu AI sinh câu hỏi sai |
+| Problem Statement | Cùng nhóm phản biện và hoàn thiện Problem Statement v0 và v1, đặc biệt ở tiêu chí Success Metric (đo thời gian chuẩn bị và tỷ lệ câu hỏi chính xác) | Giúp Problem Statement chặt chẽ, không bị lẫn giải pháp công nghệ vào phần định nghĩa bài toán |
+| Mức can thiệp AI | Phân tích bài toán theo thang can thiệp No AI -> Rule -> Workflow -> Agent; lập luận vì sao chọn Workflow thay vì Agent tự động hoàn toàn | Nhóm thống nhất mức can thiệp là Workflow (AI trích xuất và sinh câu hỏi nháp, con người review) để kiểm soát rủi ro sai sót kiến thức |
+| Quyết định | Đánh giá 4 rủi ro (Value, Usability, Feasibility, Viability) và thiết lập ngưỡng dừng (stopping threshold) | Nhóm đi đến quyết định Go (phạm vi Workflow thử nghiệm với 1 môn học cụ thể) |
 
 ---
 
@@ -159,35 +159,47 @@ HIỆN TẠI — 80 phút/tuần
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Mở rộng góc nhìn tìm kiếm nỗi đau theo 4 lăng kính từ bối cảnh kỹ thuật và học tập | Gợi ý thêm các khía cạnh tốn thời gian như chuẩn hóa Excel hay phân loại khảo sát | Gợi ý giải pháp quá sớm ("cần chatbot AI quản lý task", "tool tự động code") | Gạt bỏ các gợi ý mang tính giải pháp, viết lại thuần túy dạng Job Story gắn với bối cảnh và số liệu đo lường thật |
+| CP2 Problem Card | Đóng vai PM hoài nghi để phản biện Card #1 (Tổng hợp Release Notes) | Chỉ ra điểm yếu: chưa chứng minh được sự khác biệt giữa AI và auto-generate sẵn có của GitHub | Ban đầu gợi ý biến thành Agent tự động publish thẳng lên Slack/GitHub mà bỏ qua bước con người duyệt | Giữ vững lập trường HITL (Human-in-the-loop): bắt buộc Dev phải review trước khi công bố để tránh hallucination |
+| CP4 Research | Tìm kiếm các giải pháp trắc nghiệm/flashcard AI hiện có trên thị trường | Liệt kê nhanh các công cụ như Quizgecko, Anki AI, StudySmarter và tính năng chính | Đưa ra thông tin chung chung, không chỉ rõ điểm nghẽn thực tế khi xử lý slide tiếng Việt hoặc công thức | Tự đối chiếu và bổ sung nhận định về rủi ro nhận diện sai thuật ngữ chuyên ngành tiếng Việt |
+| CP5 Quy trình | Chuyển đổi mô tả các bước thành cú pháp sơ đồ luồng quy trình | Định dạng nhanh cú pháp text/Mermaid mạch lạc, dễ nhìn | Thường tự ý gộp bước "đọc hiểu slide" và "chọn trọng tâm", làm lu mờ bottleneck | Tách riêng bước lọc nội dung trọng tâm thành một bước độc lập có thời gian cụ thể |
+| CP5–6 Problem Statement | Rà soát lỗi logic và tìm kiếm từ ngữ mang tính giải pháp bị lẫn vào bài toán | Phát hiện câu chữ còn mơ hồ trong Success Metric | Đề xuất metric chung chung như "tăng trải nghiệm học tập", "học nhanh hơn" | Sửa lại thành metric định lượng: "Giảm thời gian chuẩn bị câu hỏi từ 45' xuống < 3'", "Tỷ lệ câu hỏi chính xác đạt >= 90%" |
+| CP6 Mức can thiệp / quyết định | So sánh trade-off giữa Workflow và Agent; gợi ý các tiêu chí đánh giá (Eval) | Đưa ra cấu trúc phân tích 4 rủi ro (Cagan) và gợi ý khung Eval đạt/không đạt | Khuyên làm Agent tự động giải đề và chấm điểm (quá phức tạp, vượt quá năng lực kiểm soát trong lab) | Nhóm giữ vững quyết định chọn Workflow, thiết lập ngưỡng dừng: "Nếu sau 2 tuần tỷ lệ câu hỏi lỗi > 15% thì dừng pilot" |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+Trắc nghiệm và tự soi rọi qua trải nghiệm thực tế trong buổi làm việc nhóm:
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Khi lắng nghe phần pitch của các thành viên trong nhóm 6PACKS, tôi nhận ra góc nhìn về "nỗi đau" của mỗi người phụ thuộc rất lớn vào bối cảnh làm việc hàng ngày của họ. Các bạn thiên về kỹ thuật (như bài log ML của Hà Anh hay test dbt của Trọng) thường nhìn thấy vấn đề ở tầng hệ thống và dữ liệu, trong khi các bạn khác lại đau đáu về các vấn đề sát sườn trong đời sống sinh viên (như việc sửa CV, đối chiếu deadline hay ôn thi nước rút của Kiên và Tuấn). Bài học lớn nhất là một vấn đề nghe có vẻ "to tát" về mặt công nghệ chưa chắc đã là một bài toán tốt cho lab nếu thiếu người dùng thực tế để kiểm chứng ngay. Ngược lại, một bài toán tưởng chừng bình dị như việc ôn thi trước slide bài giảng lại có tần suất lặp lại dày đặc, nỗi đau rõ ràng và dễ tiếp cận người dùng thật ngay tại lớp.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Nhóm bị "solution-first" rõ nhất ở giai đoạn đầu của CP3 khi pitch và gom cụm. Khi bàn về bài toán ôn thi, phản xạ tự nhiên của hầu hết mọi người là ngay lập tức thảo luận xem nên dùng "mô hình ngôn ngữ nào", "prompt RAG ra sao", hay "làm con chatbot hỏi đáp tài liệu". Nhóm nhận ra điều này khi bắt tay vào vẽ cây Opportunity Solution Tree (OST) và phát hiện ra các thẻ như "Chatbot AI tạo đề thi" hay "Dashboard tra cứu" thực chất là tính năng/giải pháp chứ không phải nỗi đau người dùng. Nhóm đã xử lý bằng cách kiên quyết gạch bỏ các thẻ này khỏi tầng Opportunity, ép bản thân phải quay lại trả lời câu hỏi cốt lõi: Nỗi đau thật của sinh viên là gì? Đó là việc tốn quá nhiều thời gian đọc slide thụ động mà không biết mình hổng kiến thức ở đâu, và nỗi sợ câu hỏi trắc nghiệm tự làm bị sai lệch.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Tôi đã có sự thay đổi nhận thức rõ rệt sau khi nhận phản biện từ Hà Anh về bài toán Release Notes (#1 của tôi). Ban đầu, tôi khá tự tin vì đây là bài toán tôi gặp hàng tuần và đã có baseline 55 phút rất rõ. Tuy nhiên, khi Hà Anh chất vấn: *"GitHub đã có sẵn tính năng auto-generate release notes từ PR, tại sao nhóm phải làm công cụ riêng?"*, tôi buộc phải nhìn nhận lại một cách nghiêm túc. Tôi nhận ra rằng nếu chỉ giải quyết việc "gom thông tin", các công cụ sẵn có (Rule/Template) đã làm được 70-80%. Giá trị gia tăng của AI chỉ nằm ở bước viết diễn giải (narrative) cho người dùng cuối. Điều này giúp tôi không bảo thủ bảo vệ bài của mình khi nhóm chấm điểm shortlist, và hoàn toàn đồng thuận chuyển sang chọn bài toán câu hỏi ôn tập (#7) vì bài toán đó có độ mơ hồ cao hơn và giá trị can thiệp của AI rõ ràng hơn hẳn.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Điều làm tôi bất ngờ nhất khi nhóm đối chiếu và phỏng vấn nhanh các bạn sinh viên xung quanh là: sinh viên không hề thiếu câu hỏi để luyện (trên mạng có rất nhiều đề trôi nổi), nhưng họ cực kỳ sợ việc học phải các câu hỏi trắc nghiệm "ảo giác" hoặc không bám sát trọng tâm mà giảng viên sẽ ra thi. Rất nhiều bạn chia sẻ rằng họ từng thử copy slide vào ChatGPT để nhờ tạo câu hỏi trắc nghiệm, nhưng các câu hỏi tạo ra thường quá dễ, hỏi mẹo từ ngữ vụn vặt hoặc hỏi những phần giảng viên đã dặn giảm tải. Bằng chứng hành vi này cho thấy vấn đề cốt lõi không phải là "tạo ra thật nhiều câu hỏi", mà là "tạo ra câu hỏi đúng chuẩn đề cương và có trích dẫn nguồn slide minh chứng để đối chiếu".
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Điều khó khăn nhất là tách bạch hoàn toàn giữa "Vấn đề" và "Giải pháp", đồng thời đặt ra một Success Metric thực sự đo lường được. Trong quá trình viết Problem Statement v0, nhóm liên tục bị cám dỗ chèn các từ ngữ như "công cụ hỗ trợ tự động", "trợ lý thông minh". Việc loại bỏ các từ này để giữ mô tả thuần túy về Actor, Quy trình và Bước nghẽn đòi hỏi kỷ luật tư duy rất cao. Ngoài ra, việc xác định Success Metric có baseline (hiện tại mất bao lâu) và target đo được (thời gian giảm bao nhiêu, tỷ lệ câu hỏi đạt chuẩn là bao nhiêu) cũng rất thách thức, vì nếu đặt mục tiêu chung chung như "giúp sinh viên học tốt hơn" thì hoàn toàn vô nghĩa và không thể nghiệm thu.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu được làm lại từ đầu buổi, tôi sẽ thúc đẩy nhóm tiến hành khảo sát và phỏng vấn người dùng (Mom Test) sớm hơn một nhịp, ngay từ lúc chọn shortlist thay vì chờ đến CP4 mới đi hỏi sâu. Ngoài ra, tôi sẽ phản biện nhóm quyết liệt hơn ở khâu rà soát công cụ đã có trên thị trường: nhóm cần thử nghiệm thực tế 1-2 công cụ miễn phí như Quizlet AI hay Quizgecko trên chính slide mẫu để chỉ ra chính xác điểm yếu của chúng, thay vì chỉ đọc qua tính năng trên trang chủ của họ. Điều này sẽ giúp cho phần Boundary và Eval của nhóm sắc bén hơn rất nhiều.
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**6.7. Hiểu bài:** chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình:
+Bài toán của nhóm xuất phát từ **Problem**: sinh viên mất trung bình 45 phút đọc lướt slide thủ công để tự nhặt ý chính và soạn câu hỏi ôn tập trước kỳ thi, nhưng câu hỏi tự soạn thường thiếu bao quát và dễ sai lệch. **Quy trình hiện tại** gồm 5 bước thủ công (Tải slide $\rightarrow$ Đọc lướt $\rightarrow$ Trích xuất ý chính $\rightarrow$ Soạn câu hỏi/đáp án $\rightarrow$ Tự giải và rà soát), trong đó bước soạn câu hỏi và đáp án là bottleneck lớn nhất (chiếm 25 phút). **Metric** thành công được đo lường bằng việc giảm thời gian tạo bộ 10 câu hỏi từ 45 phút xuống dưới 3 phút, với tỷ lệ câu hỏi chuẩn xác bám sát slide đạt $\ge 90\%$. **Boundary** được thiết lập nghiêm ngặt: AI tuyệt đối không tự ý thêm các kiến thức ngoài slide giáo trình, không tự quyết định câu hỏi nào là đạt mà bắt buộc phải có sinh viên kiểm tra (Human-in-the-loop), kèm trích dẫn số trang slide tương ứng để đối chiếu. Do đầu ra có độ mơ hồ cao nhưng quy trình tuần tự rõ ràng, **Mức can thiệp AI** được xác định là **Workflow** (kết hợp Script đọc slide $\rightarrow$ AI sinh nháp câu hỏi $\rightarrow$ Sinh viên duyệt), kiên quyết không dùng Agent tự hành. Cuối cùng, nhóm đưa ra **Quyết định Go** trong phạm vi thử nghiệm nhỏ cho 1 môn học cụ thể, với ngưỡng dừng rõ ràng: nếu sau 2 tuần thử nghiệm mà tỷ lệ câu hỏi sinh viên phải sửa lại vượt quá 20% thì sẽ dừng dự án và quay về phương pháp ngân hàng câu hỏi có sẵn.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- Lean UX: Designing Great Products with Agile Teams (Jeff Gothelf & Josh Seiden).
+- The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you (Rob Fitzpatrick).
+- Opportunity Solution Tree Framework (Teresa Torres, Continuous Discovery Habits).
+- Building Effective Agents & AI Workflows Guide (Anthropic, 2024).
+- People + AI Guidebook (Google PAIR).
+- Inspired & Empowered: Product Risk Framework (Marty Cagan, Silicon Valley Product Group).
