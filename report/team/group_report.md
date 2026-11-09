@@ -91,20 +91,19 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 |Sinh viên ôn thi nước rút thực sự muốn làm trắc nghiệm để nhớ bài nhưng bỏ cuộc vì tự soạn câu hỏi quá tốn thời gian (45–60 phút/chương).|Value |5 |2 |Có |
+| 2 |Khi ném cả file slide dài (40–80 trang) vào ChatGPT thông thường, câu hỏi sinh ra bị sót ý giữa bài, lệch trọng tâm đề cương và đáp án nhiễu quá dễ đoán. |Value |5 |2 |Có |
+| 3 |Sinh viên bắt buộc phải thấy trích dẫn số trang slide gốc kèm theo mỗi câu hỏi thì mới dám tin tưởng đáp án của AI để học thi (giảm thời gian tự Ctrl+F dò lại). |Usability |5 |1 |Có |
+| 4 |Quy trình tách slide theo mục đề cương kết hợp LLM có thể sinh ra các phương án nhiễu (distractors) đủ độ khó tương đương đề thi thật. |Feasibility |4 | 2|Có |
+| 5 |Các slide có nhiều sơ đồ, bảng biểu hoặc công thức toán/code vẫn trích xuất được ngữ cảnh sạch mà không làm hỏng nội dung câu hỏi. |Feasibility |4 |3 |Không (kiểm chứng ở bước làm mẫu) |
+| 6 |Chi phí xử lý mỗi bộ slide 50 trang qua API (hoặc workflow) đủ thấp để sinh viên sử dụng thường xuyên trong mùa thi mà không gặp rào cản chi phí. |Viability | 3|4 |Không |
 
 *Điền 4–6 giả định; xóa dòng thừa.*
 
-Giả định nhóm kiểm chứng trong buổi này:
-
+Giả định nhóm kiểm chứng trong buổi này: Tập trung kiểm chứng Giả định #1, #2 và #3 (các giả định thuộc nhóm Value và Usability có mức độ quan trọng cao nhất 5/5 nhưng mức độ bằng chứng ban đầu thấp nhất 1–2/5) để xác định liệu nỗi đau có thật sự nằm ở khâu "tạo câu hỏi" hay nằm ở khâu "kiểm chứng độ chính xác và bám sát đề cương".
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: Phỏng vấn nhanh theo nguyên tắc The Mom Test (tập trung vào hành vi ôn thi kỳ gần nhất) kết hợp Log thử nghiệm thực tế (chạy thử 3 file slide bài giảng thật trên ChatGPT thông thường để đo thời gian và tỷ lệ lỗi).
 
 Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
 
