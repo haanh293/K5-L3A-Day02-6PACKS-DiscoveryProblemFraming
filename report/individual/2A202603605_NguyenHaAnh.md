@@ -126,20 +126,21 @@ $\rightarrow$ [Nhắn tin thông báo qua nhóm chat] (2 phút)
 |---|---|---|
 |Success metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết. |Có |Bổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên". |
 
-
+---
+## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Pitch Card #1 (Chỉnh sửa CV ATS-compliant) và Card #2 (Tracking log ML) cho cả nhóm. | Đóng góp 2 candidate vào bảng pitch chung; Card #1 lọt vào shortlist chấm điểm (đạt 25 điểm). |
+| Phản biện bài của bạn khác | Đặt câu hỏi cho bài #3 của Trần Xuân Trường (Release Notes): "GitHub đã có sẵn nút auto-generate release notes từ tên PR, tại sao vẫn cần công cụ riêng?"; Đặt câu hỏi cho bài #12 của Nguyễn Đức Trọng (Bài tập kèm Toán): "Thu thập dữ liệu nháp của học sinh bằng cách nào để AI biết đúng lỗi sai?" | Giúp nhóm nhận diện rằng một số bài toán đã có công cụ sẵn giải quyết phần lớn, cần phải xác minh rõ giá trị gia tăng thực sự trước khi chọn. |
+| Nhận phản biện | Trọng hỏi bài #1 của tôi: "Tại sao không dùng chatbot có sẵn mà lại phải dùng sản phẩm này, sản phẩm có gì khác biệt?"; Trường hỏi bài #2: "Nếu giải pháp là đơn giản ghi log ra file CSV, có thực sự giải quyết được bài toán so sánh nhiều mô hình cùng lúc không?" | Tôi nhận ra Card #1 cần phải làm rõ sự khác biệt so với các chatbot thông thường. Card #2 thì bottleneck thực sự không chỉ ở ghi log mà ở việc so sánh trực quan giữa nhiều lần chạy. |
+| Gom cluster / cây OST | Là người chính (theo phân công CP3), điều phối cả nhóm gom 12 candidate thành 4 cluster; viết cây Opportunity Solution Tree với 1 Outcome gốc và 3 Opportunity; gạch bỏ các thẻ mang tính solution. | Thống nhất Outcome chung: "Giảm 60% thời gian chuẩn bị câu hỏi ôn tập và tăng 40% hiệu quả ghi nhớ kiến thức trọng tâm trước kỳ thi." |
+| Chọn candidate problem | Thiết lập bảng chấm điểm 7 tiêu chí cho shortlist 6 candidate; điều phối thảo luận so sánh giữa #7 và #11; viết lý do loại từng candidate. | Nhóm chọn Candidate #7 với 31 điểm cao nhất; giải quyết bất đồng giữa #7 và #11 bằng lập luận rằng #7 có sẵn tài liệu kiểm chứng ngay trong lab. |
+| Kiểm chứng / research | Tham gia xây dựng Assumption Map (6 giả định); hỗ trợ phân tích kết quả phỏng vấn và log thử nghiệm ChatGPT trực tiếp trên 3 bộ slide. | Nhận ra bottleneck thật sự không phải tốc độ sinh câu hỏi mà là "lost in the middle" và thời gian dò lại đáp án; nhóm đã sửa lại Success Metric từ "dưới 3 phút" thành "dưới 8 phút" (bao gồm cả kiểm duyệt). |
+| Quy trình nhóm | Hỗ trợ Hoàng Đăng Kiên hoàn thiện bảng Before/After; góp ý về phương án fallback khi AI sai (retry prompt, nút "Đổi câu khác"). | Đảm bảo quy trình tương lai có đầy đủ Boundary, phương án quay về và bước HITL. |
+| Problem Statement | Hỗ trợ Nguyễn Đức Trọng viết Problem Statement v0 (theo phân công CP5); tham gia phản biện và hoàn thiện v1 — đặc biệt bổ sung trường Boundary về việc "AI không hiển thị đáp án ngay" để chống học vẹt. | Problem Statement v1 bổ sung thêm quy tắc chống "hiểu bài giả tạo" sau khi tiếp nhận phản biện từ AI. |
+| Mức can thiệp AI | Tham gia phân tích ma trận mơ hồ × phức tạp; lập luận vì sao bài toán nằm ở ô "Mơ hồ cao – Phức tạp thấp" → phù hợp mức Workflow. | Nhóm thống nhất chọn Workflow (RAG + Structured Output) thay vì Agent, vì luồng xử lý tuyến tính và cần kiểm soát rủi ro ảo giác. |
+| Quyết định | Là người chính (theo phân công CP6), điều phối cả nhóm đánh giá 4 rủi ro (Value / Usability / Feasibility / Viability); tổng hợp quyết định cuối cùng. | Nhóm quyết định "Not Yet" do rủi ro Viability cao (chi phí API quá lớn cho đối tượng sinh viên); đề xuất hướng thử nghiệm SLM local và semantic caching. |
 
 ---
 
@@ -147,12 +148,12 @@ $\rightarrow$ [Nhắn tin thông báo qua nhóm chat] (2 phút)
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Sau khi tự scan 4 problem, tôi dùng AI gợi ý thêm ý tưởng từ các lăng kính còn thiếu. | Gợi ý thêm góc nhìn "Pain từ người khác" (vấn đề đồng bộ API Backend-Mobile) mà tôi chưa nghĩ tới. | AI gợi ý một số ý quá chung chung ("tạo chatbot hỗ trợ học tập", "ứng dụng AI quản lý thời gian") — là solution trá hình, không phải problem. | Loại bỏ tất cả gợi ý mang tính giải pháp; chỉ giữ lại những ý có quy trình cụ thể và dấu hiệu thật đo được. |
+| CP2 Problem Card | Nhờ AI đóng vai "PM hoài nghi" phản biện Card #1 (CV ATS). | AI chỉ ra đúng điểm yếu: Success Metric chỉ đo thời gian format mà chưa đo tỷ lệ lọt qua ATS. | AI gợi ý thêm nhiều metric phụ không cần thiết (NPS score, retention rate) vượt xa phạm vi lab. | Chỉ bổ sung thêm 1 metric cốt lõi: "Tỷ lệ CV lọt qua vòng ATS tăng lên", bỏ qua các metric AI gợi ý quá phức tạp. |
+| CP4 Research | Dùng AI tìm kiếm nhanh các công cụ tạo quiz từ tài liệu hiện có trên thị trường. | Liệt kê nhanh Quizlet, Quizgecko, NotebookLM và tính năng chính của từng tool. | Đánh giá quá tích cực về khả năng của các tool (nói Quizgecko "hỗ trợ đa ngôn ngữ tốt") mà thực tế khi thử trên slide tiếng Việt thì kết quả rất kém. | Tự trải nghiệm thực tế các tool và bổ sung nhận định về khoảng trống: thiếu grounding (trích dẫn số trang), không bám sát đề cương cụ thể của giảng viên. |
+| CP5 Quy trình | Dùng AI hỗ trợ cấu trúc hóa bảng Before/After và kiểm tra tính nhất quán giữa quy trình hiện tại với quy trình tương lai. | Gợi ý bổ sung cột "Rủi ro mới phát sinh" vào bảng Before/After — rất hữu ích vì nhóm ban đầu chưa nghĩ tới. | AI tự ý thêm các bước phức tạp (tích hợp LMS, hệ thống thông báo tự động) vượt quá phạm vi lab. | Giữ quy trình tương lai đơn giản 5 bước tuyến tính; loại bỏ các bước "nice-to-have" AI thêm vào. |
+| CP5–6 Problem Statement | Nhờ AI phản biện Problem Statement v0, tìm lỗ hổng logic. | AI phát hiện mâu thuẫn quan trọng: phần Impact nói cách học cũ gây "hiểu bài giả tạo" nhưng nếu AI cung cấp đáp án ngay thì vấn đề này còn tệ hơn. | AI đề xuất giải pháp quá cực đoan: "AI không bao giờ hiển thị đáp án, chỉ gợi ý". Thực tế sinh viên vẫn cần xem đáp án đúng sau khi đã tự trả lời. | Thiết kế luồng HITL hợp lý: sinh viên phải tự chọn đáp án trước → nếu sai thì nhận Hint (số trang slide) → sau đó mới hiện đáp án đầy đủ. |
+| CP6 Mức can thiệp / quyết định | Dùng AI phân tích trade-off 4 mức can thiệp (No AI / Rule / Workflow / Agent) cho bài toán của nhóm. | Phân tích rõ ràng vì sao Rule không đủ (không hiểu ngữ cảnh để sinh câu hỏi tư duy) và Agent quá phức tạp (không cần AI tự quyết bước tiếp). | AI khuyên nên chọn Agent "để tạo trải nghiệm cá nhân hóa hoàn chỉnh cho sinh viên" — quá over-engineering cho phạm vi lab. | Nhóm kiên quyết giữ mức Workflow; bổ sung lập luận rõ ràng vì sao không cần Agent trong bảng so sánh 4 mức. |
 
 ---
 
@@ -162,20 +163,50 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Khi nghe các bạn trong nhóm pitch, tôi nhận ra rằng mỗi người nhìn thấy nỗi đau từ góc độ rất khác nhau dựa trên bối cảnh cá nhân,có bạn thấy vấn đề từ phía kỹ thuật (Release Notes, test data), trong khi có bạn lại nhìn thấy nỗi đau sát sườn hơn với đời sống sinh viên (ôn thi, tạo quiz). Bài học lớn nhất là một bài toán có quy trình rõ, actor cụ thể và dễ kiểm chứng ngay tại lớp sẽ luôn tốt hơn một bài toán nghe "kỹ thuật" nhưng khó tiếp cận người dùng thật.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhóm tôi không gặp phải vấn đề này vì trong giai đoạn CP3, mọi người đều thảo luận rõ về problems mà mỗi cá nhân đặt ra, mỗi thành viên đều lắng nghe và cùng nhau làm rõ vấn đề.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Tôi đã đổi ý khi nhận phản biện Card #1 (Chỉnh sửa CV) của tôi: "Tại sao không dùng chatbot có sẵn mà lại phải dùng sản phẩm này?" Ban đầu tôi khá tự tin vì bottleneck 30–45 phút chỉnh margin rất rõ ràng. Nhưng câu hỏi phản biện khiến tôi phải thừa nhận rằng ranh giới giữa việc dùng một prompt ChatGPT thông thường với một sản phẩm chuyên biệt rất mờ nhạt, và impact khó kiểm chứng ngay trong lab. Điều này giúp tôi không bảo thủ bảo vệ bài mình và hoàn toàn đồng thuận khi nhóm chọn Candidate #7 thay vì bài của tôi.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Không
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Điều khó nhất là tách bạch hoàn toàn giữa mô tả vấn đề và giải pháp. Ngoài ra, việc đặt Success Metric có baseline và target cụ thể cũng rất khó.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Tôi nghĩ mình sẽ không thay đổi gì. Còn về phản biện, bản thân tôi thấy các thành viên đều rất tích cực đưa ra ý kiến của mình để có thể đi đến kết luận chung, thế nên tôi cảm thấy tôn trọng ý kiến và kết luận mà nhóm đã đặt ra.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Bài toán của nhóm xuất phát từ **problem**: sinh viên tốn rất nhiều thời gian (45 phút/chương) để tự soạn câu hỏi trắc nghiệm ôn thi từ slide bài giảng, và khi thử nhờ ChatGPT thì bị sót ý giữa bài (lost in the middle), đáp án nhiễu ngây ngô, phải mất thêm 15–25 phút tự Ctrl+F dò lại slide để kiểm chứng. 
+
+**Quy trình hiện tại** có 6 bước thủ công từ đăng bài xin đề → chờ đợi → lọc đề → làm bài → dò đáp án, với bottleneck chính ở bước chờ đợi bị động (1–2 ngày) và bước lật slide dò đáp án (30 phút). 
+
+**Metric** thành công: thời gian có bộ 20 câu hỏi giảm từ 45 phút xuống dưới 3 phút; thời gian dò đáp án giảm từ 30 phút xuống dưới 5 phút; tỷ lệ câu hỏi không bịa kiến thức đạt trên 95%. 
+
+**Boundary**: AI tuyệt đối không được bịa kiến thức ngoài tài liệu (grounding), không hiển thị đáp án ngay mà buộc sinh viên tự chọn trước (HITL), và luôn đính kèm trích dẫn số trang slide. 
+
+**Mức can thiệp** là Workflow (RAG + Structured Output JSON) — vì Rule không hiểu ngữ cảnh để sinh câu hỏi tư duy, còn Agent thì quá phức tạp cho luồng xử lý tuyến tính này. 
+
+**Quyết định**: Not Yet — nhu cầu và kỹ thuật đều khả thi nhưng chi phí API quá lớn cho đối tượng sinh viên; cần thời gian nghiên cứu SLM local và semantic caching trước khi Go.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+
+- Lean UX: Designing Great Products with Agile Teams (Jeff Gothelf & Josh Seiden).
+- The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you (Rob Fitzpatrick).
+- Opportunity Solution Tree Framework (Teresa Torres, Continuous Discovery Habits).
+- Building Effective Agents & AI Workflows Guide (Anthropic, 2024).
+- People + AI Guidebook (Google PAIR).
+- Inspired & Empowered: Product Risk Framework (Marty Cagan, Silicon Valley Product Group).
