@@ -114,22 +114,20 @@ $\rightarrow$ [Nhắn tin thông báo qua nhóm chat] (2 phút)
 -> [Mobile Dev đọc tin & cập nhật DTO/Model bên App] (15 phút)
 -> [BOTTLENECK: Test tích hợp, crash app do sai Data Type và phải dò lại code Backend để debug] (120 - 180 phút) 
 ->
-
+```
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao: #1 (Tinh chỉnh CV ATS-compliant)
-- Câu hỏi Đây là "nỗi đau" cực kỳ phổ biến và cấp bách đối với sinh viên năm cuối. Nút thắt (bottleneck) rất rõ ràng và định lượng được (tốn 30-45 phút chỉ để chỉnh margin/font do tràn trang). Vấn đề này lặp đi lặp lại hàng tuần nhưng chưa có công cụ nào xử lý triệt để việc "khớp keyword + giữ nguyên layout 1 trang" một cách mượt mà. muốn nhóm phản biện:
- Liệu việc dùng tool/AI để tự động hóa cắt gọt và chèn từ khóa vào CV có khiến hồ sơ của chúng ta trở nên rập khuôn và mất đi tính cá nhân hóa trong mắt nhà tuyển dụng con người không?
-### AI đã phản biện card thế nào
+- Card số:#1 (Tinh chỉnh CV ATS-compliant)
+- Vì sao: Đây là "nỗi đau" cực kỳ phổ biến và cấp bách đối với sinh viên năm cuối. Nút thắt (bottleneck) rất rõ ràng và định lượng được (tốn 30-45 phút chỉ để chỉnh margin/font do tràn trang). Vấn đề này lặp đi lặp lại hàng tuần nhưng chưa có công cụ nào xử lý triệt để việc "khớp keyword + giữ nguyên layout 1 trang" một cách mượt mà.
+- Câu hỏi muốn nhóm phản biện:Liệu việc dùng tool/AI để tự động hóa cắt gọt và chèn từ khóa vào CV có khiến hồ sơ của chúng ta trở nên rập khuôn và mất đi tính cá nhân hóa trong mắt nhà tuyển dụng con người không?
+ ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
 | | | |
-Success metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết.CóBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".
-|Rủi ro niềm tin (Trust/Safety): Nếu AI tự động map keyword từ JD vào CV, ứng viên có thể nộp một bản CV phóng đại, chứa những kỹ năng họ không thực sự có.| Có|Bổ sung giới hạn (Boundary) vào giải pháp: AI chỉ được phép đối chiếu và gợi ý sắp xếp lại những kinh nghiệm đã có sẵn trong Master CV, tuyệt đối không tự bịa thêm dòng kinh nghiệm mới.. |---
+SSuccess metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết.CóBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".ucCócesBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".s
+|Rủi ro niềm tin (Trust/Safety): Nếu AI tự động map keyword từ JD vào CV, ứng viên có thể nộp một bản CV phóng đại, chứa những kỹ năng họ không thực sự có.|Có | Bổ sung giới hạn (Boundary) vào giải pháp: AI chỉ được phép đối chiếu và gợi ý sắp xếp lại những kinh nghiệm đã có sẵn trong Master CV, tuyệt đối không tự bịa thêm dòng kinh nghiệm mới.| metric chưa trọn vẹn: Chỉ đo lường "thời gian format layout giảm xuống" là chưa đủ. Format nhanh nhưng CV vẫn bị hệ thống ATS loại thì vấn đề lõi chưa được giải quyết.CóBổ sung thêm metric cốt lõi: "Tỷ lệ CV lọt qua vòng lọc của hệ thống ATS (được gọi phỏng vấn) tăng lên".
 
-## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
