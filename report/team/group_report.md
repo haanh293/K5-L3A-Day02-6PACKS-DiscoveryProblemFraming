@@ -170,21 +170,40 @@ Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
-```text
+#### Bảng chi tiết quy trình (Rule / AI / Human)
 
-```
+| Bước | Tên bước | Loại hình | Tác tử (Actor) | Input $\rightarrow$ Output | Chi tiết thao tác & Ranh giới |
+|:---:|:---|:---:|:---|:---|:---|
+| **1** | Tải tài liệu học tập | **Con người** | Sinh viên | Slide PDF, file giáo trình $\rightarrow$ File thô trên hệ thống | Sinh viên kéo thả file bài giảng (PDF/Docx), chọn số lượng câu hỏi và phạm vi ôn tập. |
+| **2** | Tiền xử lý & Trích xuất văn bản | **Rule** | Hệ thống (Parser) | File PDF thô $\rightarrow$ Clean text chunks kèm Page ID | Hệ thống bóc tách text, lọc bỏ trang bìa/mục lục, chia chunk (500–1000 tokens) và gắn metadata số trang. |
+| **3** | Sinh câu hỏi & Trích dẫn nguồn | **AI** | LLM Engine (RAG) | Clean text chunks $\rightarrow$ Bộ câu hỏi MCQ (JSON) | LLM đọc ngữ cảnh, nhận diện khái niệm chính, sinh 4 lựa chọn (1 đúng, 3 nhiễu) kèm trích dẫn số trang/đoạn văn gốc (grounding). |
+| **4** | Kiểm định cấu trúc & Cú pháp | **Rule** | Hệ thống (Validator) | JSON từ AI $\rightarrow$ Bộ đề hợp lệ trên UI | Kiểm tra schema JSON, đủ 4 đáp án A-B-C-D, đáp án đúng duy nhất. Nếu hợp lệ thì render lên giao diện làm bài. |
+| **5** | Làm bài & Đối soát kiến thức | **Con người** | Sinh viên | Giao diện câu hỏi $\rightarrow$ Kết quả & Insight ôn tập | Sinh viên làm bài chủ động; hệ thống chấm điểm tức thì, xem lời giải và đoạn trích slide đối soát. |
+
+#### Phân định ranh giới (Boundaries)
+* **Human Boundary (Con người):** Chỉ tham gia ở hai đầu mút: cung cấp tài liệu đầu vào (Bước 1) và thực hành làm bài, đối soát kết quả đầu ra (Bước 5).
+* **System Boundary (Rule vs AI):**
+  * **Rule:** Xử lý các tác vụ tiền/hậu kỳ có tính xác định (deterministic) như bóc tách text, chia chunk, đếm token, gán metadata số trang và kiểm định schema JSON output.
+  * **AI:** Chỉ tập trung vào tác vụ nhận thức phi cấu trúc (non-deterministic) gồm thấu hiểu ngữ nghĩa, tổng hợp khái niệm cốt lõi, sinh câu hỏi và tạo đáp án nhiễu (distractors) hợp lý.
+
+#### Phương án xử lý khi AI sai (Fallback Plan)
+* **Trường hợp 1: AI trả sai định dạng / Lỗi cấu trúc JSON:**
+  * *Xử lý:* Rule Validator tự động kích hoạt prompt retry (tối đa 2 lần). Nếu vẫn không đúng schema, hệ thống tự động loại bỏ chunk lỗi và chuyển sang chunk tiếp theo để không ngắt quãng luồng sinh câu hỏi.
+* **Trường hợp 2: AI bị ảo giác (Hallucination) hoặc sinh câu hỏi lệch:**
+  * *Cơ chế Human-in-the-loop:* Luôn hiển thị nút **"Xem trích dẫn gốc (Slide số X)"** dưới mỗi câu hỏi để người học tự đối chiếu trong 3 giây.
+  * *Tính năng Fallback:* Người dùng bấm **"Đổi câu khác (Regenerate)"** để AI sinh lại câu hỏi từ đoạn văn đó, hoặc bấm **"Báo lỗi câu hỏi"** để hệ thống gắn cờ (flag).
+
+---
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
-
----
+| Chỉ số | Trước (Quy trình thủ công) | Sau (Kỳ vọng với AI & Automation) | Ghi chú |
+|:---|:---|:---|:---|
+| **Số bước** | **6 bước** (từ đăng bài xin đề đến tra slide dò đáp án) | **3 bước từ góc nhìn người dùng** (Upload $\rightarrow$ AI xử lý $\rightarrow$ Luyện tập) | Cắt bỏ hoàn toàn các bước chờ đợi và tìm kiếm trung gian. |
+| **Tổng thời gian** | **1 – 2 ngày** (chờ đề) + **150 – 180 phút** (sàng lọc & tự giải) | **Dưới 3 phút** để tạo hoàn chỉnh bộ 20–30 câu trắc nghiệm | Sinh viên bắt đầu ôn tập chủ động ngay khi có bài giảng. |
+| **Số bước thủ công** | **5 / 6 bước** đều đòi hỏi sinh viên thao tác thủ công | **1 bước duy nhất** (Kéo thả tài liệu lên hệ thống) | Toàn bộ khâu bóc tách, soạn đề và tạo đáp án được tự động hóa. |
+| **Bottleneck chính** | Chờ xin đề trên nhóm (1–2 ngày) và tốn 45 phút lọc xem đề có đúng giáo trình mới | **Thời gian bóc tách file & độ trễ gọi LLM API** (khoảng 30 – 90 giây tùy độ dài tài liệu) | Chuyển từ điểm nghẽn "chờ con người" sang "độ trễ xử lý kỹ thuật". |
+| **Rủi ro mới phát sinh** | Học lệch kiến thức do đề cũ lỗi thời; nản lòng quay lại đọc slide thụ động | * Tài liệu scan/ảnh khó bóc tách text nếu không có OCR tốt.<br>* Ảo giác kiến thức nhẹ nếu slide quá ngắn hoặc rời rạc. | Cần áp dụng module OCR cho PDF ảnh và kiểm soát context threshold khi chunking. |
 
 ## 5. Problem Statement v0 (CP5)
 
@@ -203,7 +222,6 @@ AI phản biện người dùng (Actor): Quá rộng và ôm đồm
 Vấn đề: "Sinh viên đại học" là một tệp quá rộng. Khả năng xử lý của AI rất khác nhau tùy theo ngành học. AI làm rất tốt đề trắc nghiệm Luật, Quản trị kinh doanh, Lịch sử Đảng (thiên về text, khái niệm); nhưng sẽ dễ bị "ảo giác" (hallucinate) và tính toán sai với các môn như Giải tích, Cơ học lượng tử, hay Kế toán vĩ mô.
 Đề xuất: Thu hẹp Actor hoặc định rõ phạm vi (Scope). Ví dụ: "Sinh viên đại học khối ngành Kinh tế/Xã hội" hoặc quy định rõ AI chỉ hỗ trợ định dạng câu hỏi lý thuyết, khái niệm, tình huống (case study), không hỗ trợ giải phương trình hay tính toán phức tạp ở giai đoạn 1.
 => Nhóm đồng ý với phản biện này.
--
 
 ---
 
