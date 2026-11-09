@@ -135,9 +135,10 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|Quizlet / Anki (Tự tạo hoặc AI Magic Notes) |[https://quizlet.com] |Bước lưu trữ câu hỏi và luyện tập ghi nhớ lặp lại (Spaced Repetition). |Giao diện học và làm test rất mượt; cộng đồng lớn. |Nhập tay tốn 45 phút/chương; tính năng AI miễn phí bị giới hạn và chưa bám sát cấu trúc đề cương tiếng Việt. |Không cần tự xây lại giao diện học phức tạp, hãy tập trung vào chất lượng đầu ra của bộ câu hỏi & đáp án. |
+|ChatGPT / Claude (Upload PDF + Prompt trực tiếp) |[https://chatgpt.com] |Bước đọc file PDF và sinh nhanh danh sách câu hỏi trắc nghiệm. |Tốc độ nhanh (< 1 phút), miễn phí, hiểu tiếng Việt tốt. |Bỏ sót kiến thức ở giữa file dài (lost in the middle); đáp án nhiễu ngây ngô; không tự động gắn chính xác số trang slide cho từng câu để kiểm chứng. |Một prompt đơn lẻ là không đủ; cần chia nhỏ quy trình (Workflow): Tách slide theo mục -> Sinh câu hỏi theo trọng tâm -> Gắn trích dẫn trang. |
+|Google NotebookLM |[https://notebooklm.google.com] |Bước đọc hiểu tài liệu nguồn và trả lời/tạo Study Guide có trích dẫn (Citation). |Grounding cực kỳ tốt, bám sát tài liệu gốc, có nút bấm nhảy tới đoạn trích dẫn. |Chưa hỗ trợ sinh bộ trắc nghiệm 4 lựa chọn (MCQ) theo đúng ma trận mức độ khó (Nhớ / Hiểu / Vận dụng) kèm kiểm định chất lượng phương án nhiễu. |Học tập cơ chế Grounding (bắt buộc trích dẫn nguồn/số trang slide) làm tiêu chí bắt buộc (Boundary & Eval) cho giải pháp của nhóm. |
+|Quizgecko / Wayground AI |[https://quizgecko.com] |Bước chuyển đổi tài liệu PDF/văn bản thành bài quiz tương tác. |Tự động hóa từ đầu đến cuối (upload file -> ra bài test tính điểm). |Bản miễn phí giới hạn số trang rất thấp; không đối chiếu được với đề cương riêng của giảng viên; đôi khi cắt sai ngữ cảnh ở các slide nhiều bullet rời rạc. |Cần bước tiền xử lý: Cho phép sinh viên chọn/nhập trọng tâm ôn tập trước khi sinh câu hỏi để tránh hỏi lan man vào phần giới thiệu. |
 
 ---
 
