@@ -157,7 +157,6 @@ Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
 | **5** | Sinh viên ôn thi | Bộ câu hỏi đã lọc | Bài làm với các đáp án đã chọn | **30 phút** / Mỗi lần làm thử | Làm bài trong tâm lý bất an vì không chắc đề có chuẩn và có đáp án đúng đi kèm hay không. |
 | **6** | Sinh viên ôn thi | Bài làm, tài liệu/slide bài giảng gốc | Điểm số và danh sách câu sai đã được kiểm chứng | **30 phút** / Mỗi bài test | **Vòng lặp sửa sai:** Đề cũ thường thiếu đáp án chuẩn hoặc giải sai, sinh viên phải tự lật từng trang slide để dò; nếu sai lệch quá nhiều lại phải quay lại lọc đề khác (về B4). |
 
----
 
 **Bottleneck chính:**
 
@@ -203,8 +202,8 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 | **Số bước** |6 bước (từ đăng bài xin đề đến tra slide dò đáp án) | 3 bước từ góc nhìn người dùng (Upload $\rightarrow$ AI xử lý $\rightarrow$ Luyện tập) | Cắt bỏ hoàn toàn các bước chờ đợi và tìm kiếm trung gian. |
 | **Tổng thời gian** | 1 – 2 ngày (chờ đề) + 150 – 180 phút (sàng lọc & tự giải) | Dưới 3 phút để tạo hoàn chỉnh bộ 20–30 câu trắc nghiệm | Sinh viên bắt đầu ôn tập chủ động ngay khi có bài giảng. |
 | **Số bước thủ công** | 5 / 6 bước đều đòi hỏi sinh viên thao tác thủ công | 1 bước duy nhất (Kéo thả tài liệu lên hệ thống) | Toàn bộ khâu bóc tách, soạn đề và tạo đáp án được tự động hóa. |
-| **Bottleneck chính** | Chờ xin đề trên nhóm (1–2 ngày) và tốn 45 phút lọc xem đề có đúng giáo trình mới | **Thời gian bóc tách file & độ trễ gọi LLM API** (khoảng 30 – 90 giây tùy độ dài tài liệu) | Chuyển từ điểm nghẽn "chờ con người" sang "độ trễ xử lý kỹ thuật". |
-| **Rủi ro mới phát sinh** | Học lệch kiến thức do đề cũ lỗi thời; nản lòng quay lại đọc slide thụ động | * Tài liệu scan/ảnh khó bóc tách text nếu không có OCR tốt.<br>* Ảo giác kiến thức nhẹ nếu slide quá ngắn hoặc rời rạc. | Cần áp dụng module OCR cho PDF ảnh và kiểm soát context threshold khi chunking. |
+| **Bottleneck chính** | Chờ xin đề trên nhóm (1–2 ngày) và tốn 45 phút lọc xem đề có đúng giáo trình mới | Thời gian bóc tách file & độ trễ gọi LLM API (khoảng 30 – 90 giây tùy độ dài tài liệu) | Chuyển từ điểm nghẽn "chờ con người" sang "độ trễ xử lý kỹ thuật". |
+| **Rủi ro mới phát sinh** | Học lệch kiến thức do đề cũ lỗi thời; nản lòng quay lại đọc slide thụ động |  Tài liệu scan/ảnh khó bóc tách text nếu không có OCR tốt.<br>* Ảo giác kiến thức nhẹ nếu slide quá ngắn hoặc rời rạc. | Cần áp dụng module OCR cho PDF ảnh và kiểm soát context threshold khi chunking. |
 
 
 ## 5. Problem Statement v0 (CP5)
