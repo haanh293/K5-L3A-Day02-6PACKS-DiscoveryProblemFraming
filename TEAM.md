@@ -140,3 +140,23 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 - Làm việc nhóm giúp tôi nhận ra tầm quan trọng của việc thống nhất quy trình và góc nhìn trước khi bắt tay vào làm. Việc cùng nhau vẽ quy trình và làm rõ Boundary giúp cả nhóm hiểu chung một bài toán.
+
+### NgoVanTuan-2A202603630
+
+**Phần việc phụ trách:**
+
+- Hỗ trợ kiểm chứng CP4; đưa ý kiến CP6 — ma trận mức can thiệp, AI Canvas, đánh giá và Problem Statement v1.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Đưa ra hai candidate ở CP3 về đối chiếu deadline và xác định kiến thức cần ôn từ nhiều nguồn; phản biện candidate tạo quiz bằng câu hỏi về cách đảm bảo chất lượng câu hỏi AI.
+- Hỗ trợ CP4 tổng hợp kiểm chứng từ phỏng vấn và thử nghiệm trên 3 bộ slide; kết quả làm rõ bottleneck là độ phủ nội dung và thời gian kiểm tra đáp án, thay vì tốc độ sinh chữ.
+- Hoàn thiện các phần CP6 về workflow RAG + structured output, grounding, citation, human-in-the-loop, AI Canvas, tiêu chí đánh giá và Problem Statement v1; đề xuất giữ Not Yet do rủi ro chi phí chưa được giải quyết.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `group_report.md`: mục 7 (CP6).
+
+**Điều mình học được từ phần nhóm:**
+
+- Tốc độ tạo văn bản không phải bottleneck chính; cần đo độ phủ kiến thức, thời gian kiểm chứng và chi phí. Citation theo trang, grounding và bước người học tự làm bài giúp kiểm soát rủi ro AI sai, nhưng chưa thay thế được việc kiểm thử chất lượng và tính khả thi.
