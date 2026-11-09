@@ -1,7 +1,7 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603630_NgoVanTuan
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
-> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
+> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../../docs/01-worksheet.md).
 > Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
 
 ## 1. Thông tin học viên
@@ -10,7 +10,7 @@
 - MSSV: 2A202603630
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: 6PACKS
-- Link repo nhóm:https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming.git
+- Link repo nhóm: https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming.git
  
 ---
 
@@ -20,12 +20,12 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | Lặp lại + tốn thời gian | Khi tôi phải tổng hợp deadline từ LMS, email, chat nhóm và lịch học, tôi muốn biết công việc nào phải làm trước, để không trễ nộp. | Sinh viên làm nhóm, sinh viên đang học online/offline | Mỗi tuần mất 30–60 phút; 3–5 lần/tuần; khoảng 20–30 sinh viên trong một lớp gặp tình trạng này; có nhiều tin nhắn "ai nộp bài hôm nay?" trong nhóm chat. |
-| 2 | Cần đọc, tổng hợp nhiều thông tin | Khi tôi phải đọc nhiều slide, ghi chú và tài liệu rời rạc, tôi muốn tóm tắt điểm quan trọng để ôn tập nhanh hơn. | Sinh viên học nhiều môn, người có nhiều source riêng | Mất 45–90 phút mỗi tuần đọc lại ghi chú; rất hay lặp lại vì nội dung bị trùng trên nhiều file; nhiều bạn chia sẻ cảm giác "đọc quá nhiều nhưng không nhớ nổi trọng tâm". |
-| 3 | Lặp lại + pain từ người khác | Khi tôi cần tổng hợp phản hồi và nội dung từ nhiều thành viên trong dự án, tôi muốn có 1 bản thống nhất để gửi đi, để tránh mất thời gian chỉnh sửa lặp lại. | Nhóm làm project, capstone, báo cáo | Mỗi lần review báo cáo mất 20–40 phút; thường lặp lại 2–3 vòng; 1 nhóm 3–4 người dễ thấy tình huống này mỗi tuần. |
-| 4 | Cần đọc, tổng hợp nhiều thông tin | Khi tôi cần tìm lại quyết định, link, ghi chú từ cuộc họp hoặc chat trước đó, tôi muốn truy ra đúng thông tin ngay, để không mất context trong làm việc nhóm. | Sinh viên làm dự án, các thành viên trong group | Mất 10–20 phút mỗi lần tìm thông tin; 1–2 lần/tuần; nhiều nhóm có trạng thái "mất file, mất link, mất quyết định" và phải hỏi lại người khác. |
+| 1 | Lặp lại + tốn thời gian | Khi tôi phải tổng hợp deadline từ LMS, email, chat nhóm và lịch học, tôi muốn biết công việc nào phải làm trước, để không trễ nộp. | Sinh viên làm nhóm, sinh viên đang học trực tuyến/trực tiếp | Mỗi tuần mất 30–60 phút; 3–5 lần/tuần; khoảng 20–30 sinh viên trong một lớp gặp tình trạng này; có nhiều tin nhắn "ai nộp bài hôm nay?" trong nhóm chat. |
+| 2 | Cần đọc, tổng hợp nhiều thông tin | Khi tôi phải đọc nhiều slide, ghi chú và tài liệu rời rạc, tôi muốn tóm tắt các điểm quan trọng để ôn tập nhanh hơn. | Sinh viên học nhiều môn, người có tài liệu từ nhiều nguồn riêng lẻ | Mất 45–90 phút mỗi tuần đọc lại ghi chú; việc này thường lặp lại vì nội dung bị trùng trên nhiều file; nhiều bạn chia sẻ cảm giác "đọc quá nhiều nhưng không nhớ nổi trọng tâm". |
+| 3 | Lặp lại + pain từ người khác | Khi tôi cần tổng hợp phản hồi và nội dung từ nhiều thành viên trong dự án, tôi muốn có một bản thống nhất để gửi đi, để tránh mất thời gian chỉnh sửa lặp lại. | Nhóm làm dự án, đồ án tốt nghiệp hoặc báo cáo | Mỗi lần rà soát báo cáo mất 20–40 phút; thường lặp lại 2–3 vòng; một nhóm 3–4 người dễ gặp tình huống này mỗi tuần. |
+| 4 | Cần đọc, tổng hợp nhiều thông tin | Khi tôi cần tìm lại quyết định, liên kết hoặc ghi chú từ cuộc họp hay cuộc trò chuyện trước đó, tôi muốn truy ra đúng thông tin ngay, để không mất ngữ cảnh khi làm việc nhóm. | Sinh viên làm dự án, các thành viên trong nhóm | Mất 10–20 phút mỗi lần tìm thông tin; 1–2 lần/tuần; nhiều nhóm gặp tình trạng "mất file, mất liên kết, mất quyết định" và phải hỏi lại người khác. |
 | 5 | Tốn thời gian | Khi tôi phải chuyển nội dung từ ghi chú thô thành bản trình bày hoặc báo cáo theo template, tôi muốn rút gọn ý chính, để không mất thời gian viết lại từ đầu. | Sinh viên viết báo cáo, thuyết trình, nộp bài | Mỗi bài báo cáo mất 1–2 giờ để format và chỉnh lại; thường là giai đoạn cuối trước deadline; các bạn hay than phiền về việc "viết lại nhiều lần". |
-| 6 | Pain từ người khác | Khi tôi thấy bạn cùng nhóm phải hỏi lại cùng 1 thứ nhiều lần, tôi muốn các task và thông tin được cập nhật rõ ràng hơn, để team vận hành smooth hơn. | Nhóm học tập, project team | 1 buổi họp nhóm có 2–4 câu hỏi lặp lại; mất 10–15 phút mỗi buổi; nhiều nhóm đã tự đặt "ai chưa làm gì", "deadline nào?" nhưng vẫn không có hệ thống rõ. |
+| 6 | Pain từ người khác | Khi tôi thấy bạn cùng nhóm phải hỏi lại cùng một việc nhiều lần, tôi muốn các nhiệm vụ và thông tin được cập nhật rõ ràng hơn, để nhóm phối hợp trôi chảy hơn. | Nhóm học tập, nhóm dự án | Một buổi họp nhóm có 2–4 câu hỏi lặp lại; mất 10–15 phút mỗi buổi; nhiều nhóm đã tự đặt câu hỏi "ai chưa làm gì", "deadline nào?" nhưng vẫn chưa có hệ thống rõ ràng. |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
@@ -138,16 +138,16 @@ Lặp lại nếu còn góp ý cần xử lý
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Đưa ra candidate #5 về đối chiếu deadline và #6 về xác định kiến thức cần ôn từ nhiều nguồn. | Hai vấn đề được đưa vào các cluster Quản trị công việc & Giao tiếp và Ôn thi & Đánh giá năng lực. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: “Làm sao để đảm bảo chất lượng câu hỏi AI tạo ra?” | Làm rõ rủi ro chất lượng đầu ra cần được kiểm chứng bằng grounding, trích dẫn nguồn và tiêu chí đánh giá. |
+| Nhận phản biện | Câu hỏi tôi nhận được: “Vấn đề nằm ở việc thiếu công cụ hay tính chủ động khi đã có Google Calendar hay Notion hỗ trợ?” | Nhận ra candidate deadline có thể được giải quyết bằng quy trình/công cụ sẵn có; không nên mặc định cần AI. |
+| Gom cluster / cây OST | Đóng góp hai candidate vào các cụm về quản trị công việc và ôn thi; tham gia hội tụ theo outcome nhóm. | Nhóm xác định cơ hội trọng tâm là chuyển tài liệu học tập thành câu hỏi đúng trọng tâm, đồng thời hạn chế câu hỏi/đáp án sai lệch. |
+| Chọn candidate problem | Đưa candidate #6 để nhóm cân nhắc; tham gia phản biện candidate #7. | Nhóm chọn candidate #7: tạo câu hỏi trắc nghiệm từ tài liệu ôn tập có sẵn. |
+| Kiểm chứng / research | Hỗ trợ CP4; nhóm dùng phỏng vấn theo The Mom Test và thử nghiệm trực tiếp trên 3 bộ slide. | Snapshot ghi nhận tổng hợp 4 sinh viên; vấn đề sau kiểm chứng tập trung vào độ phủ nội dung và thời gian đối chiếu đáp án, không phải tốc độ sinh chữ. |
+| Quy trình nhóm | Tham gia hoàn thiện quy trình trước/sau và xác định các bước cần Rule, AI và Human. | Quy trình tương lai thêm chia chunk có Page ID, sinh MCQ kèm trích dẫn, kiểm định cấu trúc và bước người học tự làm/kiểm chứng. |
+| Problem Statement | Phụ trách CP6 cùng phần Problem Statement v1 và tiêu chí đánh giá. | Bổ sung HITL, hint khi trả lời sai, grounding, citation và metric kiểm duyệt bộ 20 câu trong dưới 8 phút. |
+| Mức can thiệp AI | Phụ trách ma trận, AI Canvas và phân tích theo Google PAIR. | Nhóm chọn Workflow (RAG + structured output), không chọn agent để tránh phức tạp và khó kiểm soát. |
+| Quyết định | Đóng góp phân tích rủi ro và điều kiện khả thi. | Nhóm kết luận Not Yet do chưa giải quyết được viability/chi phí vận hành; cần kiểm chứng mô hình chi phí thấp hơn. |
 
 ---
 
@@ -155,12 +155,12 @@ Lặp lại nếu còn góp ý cần xử lý
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
+| CP1 Scan | Dùng AI để gợi ý và diễn đạt các problem trong bảng scan. | Giúp mở rộng góc nhìn và diễn đạt Job Story có cấu trúc. | AI không biết số liệu/trải nghiệm thực tế; thời gian, tần suất và số người ở bản nháp chưa được xác nhận. | Đánh dấu các số liệu là ước lượng, giữ problem thay vì nhảy sang giải pháp, và ghi rõ cần thay bằng quan sát thật. |
 | CP2 Problem Card | Nhờ AI sắp xếp 3 candidate thành Problem Card và phản biện độ rộng của Card #1. | Giúp chia card thành actor, bối cảnh, quy trình, bottleneck và metric; nhắc kiểm tra phương án không AI trước. | AI không biết quy trình và thời gian thực tế của tôi; các số phút và tác động trong bản nháp chưa được kiểm chứng. | Ghi rõ số liệu là ước lượng, đặt baseline là việc cần đo; thu hẹp Card #1 và chưa kết luận cần AI. Tôi cần thay ước lượng bằng trải nghiệm/quan sát thật trước khi nộp. |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Trong tài liệu nhóm, phần kiểm chứng được thực hiện bằng phỏng vấn và thử nghiệm trực tiếp; không ghi nhận AI thay thế việc thu thập bằng chứng. | Snapshot giúp gom insight và so sánh workaround, thời gian, tín hiệu xác nhận/phản bác. | Kết quả vẫn dựa trên mẫu nhỏ; log thử nghiệm chỉ có 3 bộ slide và không đại diện cho mọi môn/tài liệu. | Giữ kết luận ở mức giả thuyết cần kiểm chứng; dùng phỏng vấn/log và trích dẫn trang làm bằng chứng thay vì xem nội dung AI sinh ra là đúng mặc định. |
+| CP5 Quy trình | Không có công cụ AI cụ thể được ghi nhận cho bước vẽ quy trình; AI được xem như một tác nhân trong quy trình tương lai. | Mô tả Rule → AI → Human làm rõ điểm can thiệp và trách nhiệm kiểm tra. | Quy trình đề xuất chưa phải sản phẩm đã triển khai; các thời lượng trong quy trình hiện tại cần được xác nhận thêm. | Phân biệt quy trình hiện trạng với quy trình đề xuất; giữ parser/validator là Rule, quyết định học và xác minh cuối cùng thuộc về người học. |
+| CP5–6 Problem Statement | Dùng các bằng chứng CP4 và quy trình nhóm để hoàn thiện Problem Statement v1. | Giúp tổ chức actor, bottleneck, impact, metric, boundary và điểm AI can thiệp thành một khung thống nhất. | Bản nháp ban đầu đặt mục tiêu dưới 3 phút, chưa tính thời gian người học cần kiểm duyệt và còn lệch với metric nhóm điều chỉnh sau kiểm chứng. | Cập nhật theo kết luận nhóm: chuẩn bị và kiểm duyệt bộ 20 câu từ 45 phút xuống dưới 8 phút; yêu cầu citation và người học tự kiểm tra. |
+| CP6 Mức can thiệp / quyết định | Không dùng AI để tự quyết định; áp dụng AI Canvas, ma trận mức can thiệp và Google PAIR để phân tích vai trò dự kiến của AI. | Khung giúp phân biệt workflow với agent và chỉ rõ prediction, judgment, action, outcome, input, feedback. | Mô tả AI tự sinh nội dung không tự chứng minh được độ chính xác hoặc tính khả thi về chi phí. | Chọn workflow có grounding, structured output và HITL; giữ quyết định Not Yet do viability chưa được giải quyết. |
 
 ---
 
@@ -169,21 +169,24 @@ Lặp lại nếu còn góp ý cần xử lý
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Trong đề tài về tạo câu hỏi và đề thi ôn tập từ tài liệu đưa vào, tôi nhận ra ngoài việc sản phẩm có giải quyết đúng vấn đề hay không thì cũng cần nghĩ đến chi phí để vận hành của nó. Một sản phẩm có ích nhưng chi phí cao có thể khó phát triển lâu dài đối với nhà cung cấp dịch vụ nếu không có người dùng trả phí và cũng như là khó phù hợp với các đối tượng hướng tới nhất là với sinh viên.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Có lúc bị nghĩ đến giải pháp là giảm chi phí phải trả cho người sử dụng dịch vụ, nhưng vấn đề là chi phí vận hành thì lại lớn, lúc đó team đã đưa ra giải pháp là xây dựng sản phẩm nhỏ phục vụ mục đích 
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+tôi có, tôi thấy sau khi nhóm đưa ra phản biện thì tôi nhận ra ý tưởng của mình chua thật sự tối ưu
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+Với tôi, phần khó nhất là đặt metric.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem
+nếu làm lại tôi sẽ đổi ý tưởng của mình → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
 ---
 
 ## 7. Tài liệu tham khảo
-
--
+- [Worksheet](../../../docs/01-worksheet.md), hướng dẫn các checkpoint và cấu trúc deliverable.
+- Google PAIR, *People + AI Guidebook*; The Mom Test, Rob Fitzpatrick; Opportunity Solution Tree, Teresa Torres — các framework được nhóm áp dụng trong báo cáo.
