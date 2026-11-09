@@ -24,16 +24,15 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 2 | Lặp lại | Khi kết thúc buổi họp nhóm/họp dự án hàng tuần, tôi muốn ghi lại các quyết định chính và action items kèm người phụ trách, để cả nhóm bám sát tiến độ | Trưởng nhóm, thành viên nhóm | 2 buổi/tuần, mỗi lần mất 25–30 phút nghe lại/viết lại ghi chú và gửi Slack |
 | 3 | Lặp lại | Khi chuẩn bị buổi standup hàng ngày, tôi muốn điểm lại những việc mình đã làm hôm qua và việc vướng mắc, để cập nhật nhanh trong 2 phút | Thành viên nhóm, Scrum Master | Mất 10–15 phút mỗi sáng rà lại git log, tin nhắn chat và ticket Jira |
 | 4 | Tốn thời gian | Khi nhận file dữ liệu/báo cáo dạng Excel từ đối tác, tôi muốn chuẩn hóa các cột và định dạng lỗi về đúng cấu trúc hệ thống, để import vào cơ sở dữ liệu | Data/Business Analyst, Kỹ sư dữ liệu | Mất 60–90 phút mỗi tuần xử lý tay các ô lỗi, khoảng trắng thừa, sai định dạng ngày |
-| 7 | Cần đọc, tổng hợp nhiều thông tin | Khi tích hợp một thư viện/API mới từ bên thứ ba, tôi muốn nắm nhanh các endpoint chính, tham số xác thực và mã lỗi thường gặp, để dựng mã mẫu chạy thử | Developer | Mất 2–3 tiếng đọc qua doc dài 30–40 trang trước khi viết dòng code đầu tiên |
-| 8 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận được 50–100 phản hồi khảo sát/đánh giá của học viên hoặc người dùng, tôi muốn phân loại các ý kiến phàn nàn theo từng chủ đề, để ban quản lý biết đâu là 3 điểm nóng cần sửa ngay | Quản trị viên, Giảng viên/PM | Mất khoảng 2 tiếng đọc từng dòng phản hồi vào mỗi cuối tháng |
-| 9 | Pain từ người khác | Khi developer nhận một bug report từ tester/người dùng chỉ ghi chung chung "bị lỗi", developer muốn có đủ các bước tái hiện và môi trường gặp lỗi, để không phải nhắn tin hỏi đi hỏi lại | Developer, Tester | Developer phải nhắn tin hỏi lại 3–4 lần/bug; trung bình mất thêm 20–30 phút/bug chỉ để giao tiếp |
-| 10 | Pain từ người khác | Khi quản lý dự án cần biết tiến độ của 5 thành viên trước giờ báo cáo cấp trên, quản lý muốn có trạng thái cập nhật từng task, để không phải đi nhắn tin giục từng người | Quản lý dự án, Thành viên nhóm | 2 lần/tuần, quản lý phải gửi 5–7 tin nhắn "nhắc nợ" cập nhật trạng thái trên Jira/Trello |
+| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi tích hợp một thư viện/API mới từ bên thứ ba, tôi muốn nắm nhanh các endpoint chính, tham số xác thực và mã lỗi thường gặp, để dựng mã mẫu chạy thử | Developer | Mất 2–3 tiếng đọc qua doc dài 30–40 trang trước khi viết dòng code đầu tiên |
+| 6 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận được 50–100 phản hồi khảo sát/đánh giá của học viên hoặc người dùng, tôi muốn phân loại các ý kiến phàn nàn theo từng chủ đề, để ban quản lý biết đâu là 3 điểm nóng cần sửa ngay | Quản trị viên, Giảng viên/PM | Mất khoảng 2 tiếng đọc từng dòng phản hồi vào mỗi cuối tháng |
+| 7 | Pain từ người khác | Khi quản lý dự án cần biết tiến độ của 5 thành viên trước giờ báo cáo cấp trên, quản lý muốn có trạng thái cập nhật từng task, để không phải đi nhắn tin giục từng người | Quản lý dự án, Thành viên nhóm | 2 lần/tuần, quản lý phải gửi 5–7 tin nhắn "nhắc nợ" cập nhật trạng thái trên Jira/Trello |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
-- **Tự scan trước:** Tôi tự scan 6 vấn đề thường gặp từ trải nghiệm học tập và làm việc thực tế (#1, #2, #3, #5, #6, #9).
+- **Tự scan trước:** Tôi tự scan 4 vấn đề thường gặp từ trải nghiệm học tập và làm việc thực tế (#1, #2, #3, #7).
 - **AI gợi ý thêm:** Tôi dùng AI để mở rộng góc nhìn ở lăng kính *Tốn thời gian* và *Cần đọc, tổng hợp nhiều thông tin*.
-  - **Ý giữ lại:** Ý #4 (chuẩn hóa dữ liệu Excel), #7 (tổng hợp doc API mới), #8 (phân loại phản hồi khảo sát), #10 (theo dõi cập nhật task) vì đây là các nỗi đau có quy trình cụ thể, lặp lại và có số liệu thời gian đo lường rõ ràng.
+  - **Ý giữ lại:** Ý #4 (chuẩn hóa dữ liệu Excel), #5 (tổng hợp doc API mới), #6 (phân loại phản hồi khảo sát), #7 (theo dõi cập nhật task) vì đây là các nỗi đau có quy trình cụ thể, lặp lại và có số liệu thời gian đo lường rõ ràng.
   - **Ý bỏ:** AI gợi ý ý tưởng *"Trợ lý AI quản lý toàn bộ task dự án"* và *"Chatbot tự động giải đáp mọi thắc mắc của khách hàng"*. Tôi bỏ các ý này vì phạm vi quá rộng, không có một quy trình làm việc cụ thể và đã nhảy ngay sang giải pháp (vi phạm nguyên tắc Problem-first).
 
 ---
