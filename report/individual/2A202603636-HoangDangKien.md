@@ -8,7 +8,7 @@
 
 - Họ tên: Hoàng Đăng Kiên 
 - MSSV: 2A202603636
-- Email trường (không bắt buộc, repo có thể để public):
+- Email trường (không bắt buộc, repo có thể để public): 26ai.kienhd@vinuni.edu.vn
 - Tên nhóm: 6PACKS
 - Link repo nhóm:  https://github.com/haanh293/K5-L3A-Day02-6PACKS-DiscoveryProblemFraming/tree/main
 
@@ -150,7 +150,7 @@ HIỆN TẠI — Hậu quả xảy ra sau thi
 | CP4 Research |Dùng AI tìm kiếm một số tài liệu liên quan |AI tìm kiếm nhanh và phù hợp với nhu cầu |Một số nguồn AI tìm ra không uy tín |Kiểm chứng độ uy tính nội dung và note lại nội dung cần thiết |
 | CP5 Quy trình |Dùng AI đưa ra nhận xét về quy trình nhóm đã đưa ra |AI nhận xét chi tiết về điểm mạnh và điểm yếu |Một số điểm yếu AI đưa ra không phù hợp với ý tưởng |Sửa những điểm yếu hợp lý mà AI đưa ra |
 | CP5–6 Problem Statement |Dùng AI phân tích và nhận xét nội dung nhóm đã thảo luận |AI đưa ra nhận xét chi tiết về nội dung nhóm đã làm|Một số nhận xét của không phù hợp thực tế |Chỉnh sửa những nội dung chưa hợp lý |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP6 Mức can thiệp / quyết định |AI đưa ra nhận xét về nội dung của nhóm |Đưa ra ưu nhược điểm rõ ràng |Một số ưu điểm AI đưa ra hơi mang tính tâng bốc |Sửa những nhược điểm mà nhóm nhận xét là hợp lý |
 
 ---
 
@@ -159,19 +159,19 @@ HIỆN TẠI — Hậu quả xảy ra sau thi
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-
+Bài học tôi rút ra khi nghe các problem của nhóm khác là lựa chọn scope không phù hợp, chưa phân tích sâu nghiệp vụ, tập trung giải quyết một vấn đề mà không để ý phát sinh vấn đề khác. 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-
+Nhóm có bị "solution-first", vì khi nhóm bắt tay vào phân tích và làm những phần sau mới nảy sinh ra những vấn đề chưa được phát hiện khi đưa ra giải pháp. Nhóm đã thảo luận lại, phân tích kỹ hơn một lượt để chốt vấn đề rồi sửa hoặc bổ sung thêm những phần bị thiếu.
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+Không, vì ý tưởng của tôi khá đơn giản nên phản biện chỉ để cải thiện những cái chưa tốt và bổ sung phần thiếu
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-
+Sau khi research và phỏng vấn một số bạn, thì điều làm tôi bất ngờ là khá nhiều người phân vân về chất lượng câu hỏi mà AI đưa ra.
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+Khó khăn nhất khi viết Problem Statement là khó phân biệt giữa vấn đề và giải pháp. Từ đó dễ đưa ra vấn đề để phân tích thì lại phân tích giải pháp.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+Nếu làm lại tôi sẽ phân tích kỹ scope của dự án và phản biện mạnh hơn ở bước phân tích kỹ hơn về các điểm hạn chế của dự án.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-
+Vấn đề bắt đầu từ sinh viên tốn thời gian tìm đề thi cũ, nhóm đề xuất quy trình tự động sinh bài trắc nghiệm từ tài liệu tải lên, yêu cầu người học tự giải sau đó mới được xem đáp án. Để đạt các metric tối ưu hóa thời gian chuẩn bị và đảm bảo độ chính xác của nội dung, hệ thống thiết lập boundary nghiêm ngặt: AI tuyệt đối không được bịa kiến thức ngoài giáo trình và không cung cấp sẵn lời giải. Mặc dù hệ thống có giải pháp khả thi, dự án vẫn đưa ra quyết định "Not Yet" do vấn đề về chi phí.
 ---
 
 ## 7. Tài liệu tham khảo
