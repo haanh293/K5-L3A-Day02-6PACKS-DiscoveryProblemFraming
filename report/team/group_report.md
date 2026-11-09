@@ -59,17 +59,29 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| (Chỉnh Sửa CV theo JD)#1|5 |4 |3 |2 |3 |5 |3 |25 |
+| (Viết release Note cho theo tuần)#3|5 |3 |2 |2 |3 |4 |3 |22 |
+| (Sắp xếp deadline công việc)#5|3 |2 |4 |2 |3 |2 |5 |21 |
+| (Tạo ngân hàng câu hỏi ôn tập)#7|5 |4 |5 |5 |3 |4 |5 |31 |
+| (Sàng lọc tài liệu nghiên cứu)#9|4 |3 |4 |3 |3 |2 |4 |23 |
+| (Tạo bộ test data tự động )#11| 5|5 |3 |2 |3 |2 |4 |29 |
 
-**Candidate được chọn:**
+**Candidate được chọn: Candidate #7**
 
-**Vì sao chọn:**
+**Vì sao chọn: vì trực tiếp thấu hiểu nỗi đau ôn thi, có sẵn slide bài giảng để làm bài lab ngay mà không vướng quyền truy cập, và dễ đo lường kết quả (giảm thời gian từ 45 phút xuống dưới 3 phút) khi so sánh qua 4 cấp độ AI.**
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao loại các candidate còn lại:
+ #11 (Sinh bộ test dữ liệu): Điểm số cao thứ nhì và nghiệp vụ rất rõ, nhưng cần dựng mock database phức tạp và khó chuẩn hóa dataset chuẩn để demo kiểm thử trong thời gian lab.
 
-**Xử lý bất đồng (nếu có):**
+ #3 (Viết Release note): Phụ thuộc nhiều vào ngữ cảnh dự án phần mềm và commit log thực tế, khó xây dựng benchmark đánh giá khách quan.
+
+ #1 (Chỉnh sửa CV): Khó đo lường ranh giới giữa việc dùng một prompt ChatGPT thông thường với một giải pháp chuyên biệt; impact phỏng vấn khó kiểm chứng ngay.
+
+ #9 (Sàng lọc bài báo): Tiêu chí bài báo "dùng được" mang tính chủ quan cao theo từng đề tài, khó đo độ chính xác (ground truth).
+
+ #5 (Đối chiếu deadline): Vướng rào cản kết nối API vào các nhóm chat/LMS đóng, ranh giới vấn đề nằm ở tính chủ động cá nhân hơn là bài toán công nghệ.**
+
+**Xử lý bất đồng (nếu có):Nhóm có tranh luận giữa chọn #7 (dễ làm, tệp người dùng rộng) và #11 (tính kỹ thuật và giá trị kỹ sư cao hơn). Nhóm thống nhất chọn #7 để hoàn thành trọn vẹn trong thời hạn lab vì có sẵn tài liệu/slide để đo lường độ chính xác ngay, còn #11 sẽ đưa vào mục hướng phát triển tiếp theo.**
 
 ---
 
