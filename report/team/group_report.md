@@ -122,7 +122,14 @@ Tổng hợp:
 |---|---:|---|---|
 | | | | |
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+
+(Bảng tổng hợp cũng được đặt trong interview-snapshot)
+
+**Nhóm đã sửa problem thế nào sau kiểm chứng:
+
+1.Dịch chuyển trọng tâm Bottleneck: Ban đầu ở CP3, nhóm nghĩ bottleneck chỉ là "tốn thời gian tìm kiếm và lọc tài liệu để soạn câu hỏi". Sau kiểm chứng, nhóm nhận ra sinh viên đã biết dùng ChatGPT nhưng bị nghẽn nặng ở 2 bước: (1) Câu hỏi sinh ra bị lệch trọng tâm/bỏ sót phần giữa tài liệu dài và (2) Tốn 15–25 phút phải tự Ctrl+F đối chiếu đáp án với slide gốc vì sợ AI ảo giác.
+
+2.Điều chỉnh Success Metric thực tế hơn: Thay vì đặt mục tiêu giảm thời gian từ 45 phút xuống < 3 phút (phi thực tế vì con người vẫn cần đọc duyệt lại), nhóm sửa Target Metric thành giảm tổng thời gian chuẩn bị + kiểm duyệt một bộ 20 câu hỏi chuẩn xác từ 45 phút xuống < 8 phút (nhờ mỗi câu hỏi đều đính kèm số trang slide và trích đoạn gốc để duyệt nhanh).**
 
 ### 3.3. Research giải pháp đã có
 
