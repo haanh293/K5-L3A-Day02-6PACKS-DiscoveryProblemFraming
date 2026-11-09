@@ -161,10 +161,10 @@ Sơ đồ Mermaid - Link ảnh trong `report/assets/process-diagram.png`
 
 **Bottleneck chính:**
 
-1. **Điểm nghẽn chờ đợi & phụ thuộc (Bước 2 & 3):** Rơi vào thế hoàn toàn bị động, mất từ **vài giờ đến 1–2 ngày** chờ người khác chia sẻ đề. Nếu không có ai gửi, kế hoạch ôn tập bị gãy và rơi vào tình trạng nước đến chân mới nhảy.
+1. **Điểm nghẽn chờ đợi & phụ thuộc (Bước 2 & 3):** Rơi vào thế hoàn toàn bị động, mất từ vài giờ đến 1–2 ngày chờ người khác chia sẻ đề. Nếu không có ai gửi, kế hoạch ôn tập bị gãy và rơi vào tình trạng nước đến chân mới nhảy.
 2. **Điểm nghẽn sàng lọc & kiểm chứng (Bước 4 & 6):** 
-   * Tốn **45 phút** lọc đề trôi nổi nhưng vẫn rủi ro học lệch kiến thức do giáo trình thay đổi qua các năm.
-   * Mất thêm **30 phút** lật từng trang slide để tự giải và đính chính đáp án do đề cũ thiếu lời giải giải thích, tạo thành vòng lặp tốn thời gian giữa B6 và B4.
+   * Tốn 45 phút lọc đề trôi nổi nhưng vẫn rủi ro học lệch kiến thức do giáo trình thay đổi qua các năm.
+   * Mất thêm 30 phút lật từng trang slide để tự giải và đính chính đáp án do đề cũ thiếu lời giải giải thích, tạo thành vòng lặp tốn thời gian giữa B6 và B4.
 
 ### 4.2. Quy trình tương lai
 
