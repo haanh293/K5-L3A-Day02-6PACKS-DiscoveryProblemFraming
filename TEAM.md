@@ -4,7 +4,7 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: 6PACKS
 - Candidate problem nhóm chọn (1 câu):
 - Quyết định cuối (Go / Not Yet / No-Go):
 
@@ -12,10 +12,12 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 |Nguyễn Hà Anh |2A202603605 | |haanh293|
+| 2 |Trần Xuân Trường |2A202603617 | |XuanTruong28 |
+| 3 |Hoàng Đăng Kiên |2A202603636 | |kienHD03 |
+| 4 |Nguyễn Sỹ Huy Kiên |2A202603641 | |devouring-blade |
+| 5 |Nguyễn Đức Trọng |2A202603644 | |fishiousrend05 |
+| 6 |Ngô Văn Tuân |2A202603617 | |ngotuna23a |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
