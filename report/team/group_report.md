@@ -18,10 +18,10 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 |2A202603605_NguyenHaAnh |Chỉnh sửa CV nhanh chóng để khớp với JD |Ứng viên xin việc |Bước chỉnh sửa thủ công |Tại sao không dùng chatbot có sẵn mà lại phải dùng sản phẩm này, sản phẩm có gì khác biệt ? (2A202603644_NguyenDucTrong) |
-| 2 |2A202603605_NguyenHaAnh |Lưu kết quả và tham số tự động khi chạy thực nghiệm ML |Sinh viên nghiên cứu, kỹ sư ML |Khi copy/paste vào sheets |Nếu giải pháp là đơn giản ghi log ra file CSV, có thực sự giải quyết được bài toán so sánh nhiều mô hình cùng lúc, hay chỉ chuyển khó khăn từ việc 'copy-paste' sang việc 'đọc hiểu một file CSV khổng lồ'? (2A202603617_TranXuanTruong) |
-| 3 |2A202603617_TranXuanTruong |Viết Release note cho các pull request/commit |developer/techlead phụ trách release hàng tuần |Tốn 15–20 phút diễn giải từ commit/PR kỹ thuật thô sang ngôn ngữ nghiệp vụ dễ hiểu. | GitHub đã có sẵn nút auto-generate release notes từ tên PR, tại sao vẫn cần công cụ riêng?(2A202603605_NguyenHaAnh)|
-| 4 |2A202603617_TranXuanTruong |Khi kết thúc họp tuần, tôi muốn ghi lại quyết định và action items kèm người phụ trách để nhóm bám sát tiến độ.|Trưởng nhóm, thành viên nhóm.|Tốn 25–30 phút nghe lại/rà soát ghi chú để trích xuất đúng người - đúng việc và gửi Slack.|Các bot họp như Otter, Fireflies hay Teams Copilot đều có tính năng này, bài toán này có còn chỗ trống không?(2A202603630_NgoVanTuan)|
+| 1 |2A202603605_NguyenHaAnh |Chỉnh sửa CV nhanh chóng để khớp với JD |Ứng viên xin việc |Bước chỉnh sửa thủ công |"Tại sao không dùng chatbot có sẵn mà lại phải dùng sản phẩm này, sản phẩm có gì khác biệt ?" (2A202603644_NguyenDucTrong) |
+| 2 |2A202603605_NguyenHaAnh |Lưu kết quả và tham số tự động khi chạy thực nghiệm ML |Sinh viên nghiên cứu, kỹ sư ML |Khi copy/paste vào sheets |"Nếu giải pháp là đơn giản ghi log ra file CSV, có thực sự giải quyết được bài toán so sánh nhiều mô hình cùng lúc, hay chỉ chuyển khó khăn từ việc copy-paste sang việc đọc hiểu một file CSV khổng lồ?" (2A202603617_TranXuanTruong) |
+| 3 |2A202603617_TranXuanTruong |Viết Release note cho các pull request/commit |developer/techlead phụ trách release hàng tuần |Tốn 15–20 phút diễn giải từ commit/PR kỹ thuật thô sang ngôn ngữ nghiệp vụ dễ hiểu. | "GitHub đã có sẵn nút auto-generate release notes từ tên PR, tại sao vẫn cần công cụ riêng?"(2A202603605_NguyenHaAnh)|
+| 4 |2A202603617_TranXuanTruong |Khi kết thúc họp tuần, tôi muốn ghi lại quyết định và action items kèm người phụ trách để nhóm bám sát tiến độ.|Trưởng nhóm, thành viên nhóm.|Tốn 25–30 phút nghe lại/rà soát ghi chú để trích xuất đúng người - đúng việc và gửi Slack.|"Các bot họp như Otter, Fireflies hay Teams Copilot đều có tính năng này, bài toán này có còn chỗ trống không?"(2A202603630_NgoVanTuan)|
 | 5 |2A202603630_NgoVanTuan |Đối chiếu và kiểm tra các deadline cần thực hiện khi có nhiều công việc chồng chéo |Sinh viên có nhiều môn và tham gia làm bài nhóm. |tìm và đối chiếu deadline trong các nguồn.|"Vấn đề nằm ở việc thiếu công cụ hay tính chủ động khi đã có gg calendar hay notion hỗ trợ ?"(2A202603617_TranXuanTruong)|
 | 6 |2A202603630_NgoVanTuan |Tìm và xác định chính xác kiến thức cần ôn tập từ nhiều nguồn tài liệu rải rác.|Sinh viên học nhiều môn hoặc cần ôn tập từ nhiều tài liệu.|tìm nguồn và quyết định ý nào liên quan/trùng lặp.| "Do khả năng sắp xếp tài liệu, lộ trình ôn tập chưa tốt hay thực sự chương trình dạy có thứ tự không hợp lý ?"(2A202603636_HoangDangKien) |
 | 7 |2A202603636_HoangDangKien |Tạo câu hỏi trắc nghiệm từ tài liệu ôn tập có sẵn |Sinh viên đại học đang trong giai đoạn ôn thi.|Tìm kiếm và lọc tài liệu.|"Làm sao để đảm bảo chất lượng câu hỏi AI tạo ra ?" (2A202603630_NgoVanTuan)|
@@ -71,15 +71,16 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 **Vì sao chọn: vì trực tiếp thấu hiểu nỗi đau ôn thi, có sẵn slide bài giảng để làm bài lab ngay mà không vướng quyền truy cập, và dễ đo lường kết quả (giảm thời gian từ 45 phút xuống dưới 3 phút) khi so sánh qua 4 cấp độ AI.**
 
 **Vì sao loại các candidate còn lại:**
- #11 (Sinh bộ test dữ liệu): Điểm số cao thứ nhì và nghiệp vụ rất rõ, nhưng cần dựng mock database phức tạp và khó chuẩn hóa dataset chuẩn để demo kiểm thử trong thời gian lab.
-
- #3 (Viết Release note): Phụ thuộc nhiều vào ngữ cảnh dự án phần mềm và commit log thực tế, khó xây dựng benchmark đánh giá khách quan.
-
+ 
  #1 (Chỉnh sửa CV): Khó đo lường ranh giới giữa việc dùng một prompt ChatGPT thông thường với một giải pháp chuyên biệt; impact phỏng vấn khó kiểm chứng ngay.
 
- #9 (Sàng lọc bài báo): Tiêu chí bài báo "dùng được" mang tính chủ quan cao theo từng đề tài, khó đo độ chính xác (ground truth).
-
+ #3 (Viết Release note): Phụ thuộc nhiều vào ngữ cảnh dự án phần mềm và commit log thực tế, khó xây dựng benchmark đánh giá khách quan.
+ 
  #5 (Đối chiếu deadline): Vướng rào cản kết nối API vào các nhóm chat/LMS đóng, ranh giới vấn đề nằm ở tính chủ động cá nhân hơn là bài toán công nghệ.
+ 
+ #9 (Sàng lọc bài báo): Tiêu chí bài báo "dùng được" mang tính chủ quan cao theo từng đề tài, khó đo độ chính xác (ground truth).
+ 
+ #11 (Sinh bộ test dữ liệu): Điểm số cao thứ nhì và nghiệp vụ rất rõ, nhưng cần dựng mock database phức tạp và khó chuẩn hóa dataset chuẩn để demo kiểm thử trong thời gian lab.
 
 **Xử lý bất đồng (nếu có):Nhóm có tranh luận giữa chọn #7 (dễ làm, tệp người dùng rộng) và #11 (tính kỹ thuật và giá trị kỹ sư cao hơn). Nhóm thống nhất chọn #7 để hoàn thành trọn vẹn trong thời hạn lab vì có sẵn tài liệu/slide để đo lường độ chính xác ngay, còn #11 sẽ đưa vào mục hướng phát triển tiếp theo.**
 
@@ -105,7 +106,7 @@ Giả định nhóm kiểm chứng trong buổi này: Tập trung kiểm chứng
 
 Cách đã dùng: Phỏng vấn nhanh theo nguyên tắc The Mom Test (tập trung vào hành vi ôn thi kỳ gần nhất) kết hợp Log thử nghiệm thực tế (chạy thử 3 file slide bài giảng thật trên ChatGPT thông thường để đo thời gian và tỷ lệ lỗi).
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+Interview snapshot (File trong `report/assets/cp4-interview-snapshot-N.md`):
 
 | Trường | Nội dung |
 |---|---|
@@ -116,14 +117,14 @@ Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file 
 | Mất bao lâu, bao lần? | |
 | Insight / opportunity rút ra | |
 
+(Bảng tổng hợp được đặt trong `report/assets/cp4-interview-snapshot-1.md`)
+
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
 | | | | |
 
-
-(Bảng tổng hợp cũng được đặt trong `report/assets/cp4-interview-snapshot-1.md`)
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:
 
