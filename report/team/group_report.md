@@ -238,8 +238,8 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 #### 6.1. Ma trận độ mơ hồ × độ phức tạp
 * **Bài của nhóm nằm ở ô:** Mơ hồ cao — Phức tạp thấp (High ambiguity, Low complexity).
 * **Vì sao:** 
-  * *Mơ hồ cao:* việc đọc hiểu ngữ nghĩa bài giảng, tóm tắt ý chính và sáng tạo ra các "đáp án nhiễu" (distractors) hợp lý đòi hỏi khả năng xử lý ngôn ngữ tự nhiên linh hoạt, không thể viết bằng các quy tắc if/else truyền thống.
-  * *Phức tạp thấp:* luồng công việc rất tuyến tính và cố định (upload file $\rightarrow$ chia chunk $\rightarrow$ sinh JSON câu hỏi $\rightarrow$ làm bài), không cần AI phải lập kế hoạch nhiều bước (reasoning) hay tương tác với môi trường bên ngoài.
+  * *Mơ hồ cao:* Việc đọc hiểu ngữ nghĩa bài giảng, tóm tắt ý chính và sáng tạo ra các đáp án nhiễu (distractors) hợp lý đòi hỏi khả năng xử lý ngôn ngữ tự nhiên linh hoạt, không thể viết bằng các quy tắc if/else truyền thống.
+  * *Phức tạp thấp:* Luồng công việc rất tuyến tính và cố định (upload file $\rightarrow$ chia chunk $\rightarrow$ sinh JSON câu hỏi $\rightarrow$ làm bài), không cần AI phải lập kế hoạch nhiều bước (reasoning) hay tương tác với môi trường bên ngoài.
 
 ---
 
@@ -252,7 +252,7 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 | **workflow** | LLM đọc các chunk văn bản, trích xuất ý chính và sinh JSON (MCQ) bám sát nội dung, con người làm bài và rà soát. | Cần tạo đề thi thử nhanh, chính xác, sát tài liệu cá nhân. | AI sinh lỗi JSON hoặc bịa kiến thức (ảo giác). | Có |
 | **agent** | AI tự lên lịch học, tự tra cứu web, ép sinh viên làm bài và tự điều chỉnh độ khó. | Cần một "gia sư ảo" kèm cặp toàn diện. | Over-engineering; khó kiểm soát chất lượng; sai mục tiêu "cần bộ đề ngay". | Không |
 
-* **Mức chọn:** workflow (cụ thể là RAG workflow kết hợp structured output).
+* **Mức chọn:** Workflow (cụ thể là RAG workflow kết hợp structured output).
 * **Vì sao không chọn mức đơn giản hơn:** Các mức no AI và rule-based không thể hiểu được ngữ cảnh chuyên ngành để tóm tắt thành câu hỏi và không đủ khả năng sáng tạo ra 3 đáp án nhiễu hợp logic để đánh lừa sinh viên.
 
 ---
@@ -273,12 +273,12 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 #### 6.4. Hai câu hỏi của Google PAIR
 
 * **Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)?**
-  * **Đáp án:** hỗ trợ (augment).
+  * **Đáp án:** Hỗ trợ (augment).
   * **Bằng chứng:** Sinh viên không cần một con AI "đi thi hộ" hay "tự học thay". Họ cần một công cụ đóng vai trò như người trợ giảng, xử lý khâu lao động chân tay (lọc đề, gõ câu hỏi) để họ có tài liệu luyện tập nhanh nhất. Việc tiếp thu kiến thức và chọn đáp án cuối cùng bắt buộc phải do sinh viên thực hiện.
 
 * **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót?**
-  * **Đáp án:** báo nhầm (false positive / ảo giác kiến thức) tệ hơn rất nhiều so với bỏ sót (false negative).
-  * **Vì sao:** Nếu AI bỏ sót một vài đoạn văn không tạo câu hỏi, sinh viên lật slide vẫn có thể tự đọc bù. Nhưng nếu AI "báo nhầm" bằng cách tự bịa ra một kiến thức sai lệch mà slide không hề dạy, sinh viên học vẹt theo sẽ làm sai bài thi thật, dẫn đến hậu quả nghiêm trọng về điểm số và mất hoàn toàn niềm tin vào sản phẩm.
+  * **Đáp án:** Báo nhầm (false positive) tệ hơn rất nhiều so với bỏ sót (false negative).
+  * **Vì sao:** Nếu AI bỏ sót một vài đoạn văn không tạo câu hỏi, sinh viên lật slide vẫn có thể tự đọc bù. Nhưng nếu AI báo nhầm bằng cách tự bịa ra một kiến thức sai lệch mà slide không hề dạy, sinh viên học vẹt theo sẽ làm sai bài thi thật, dẫn đến hậu quả nghiêm trọng về điểm số và mất hoàn toàn niềm tin vào sản phẩm.
   * **Thiết kế đã xử lý thế nào:** 
     1. Ép framework RAG chỉ được lấy thông tin trong chunk (grounding). 
     2. Giao diện bắt buộc đính kèm vị trí trích dẫn (số trang, nguyên văn) ngay bên dưới lời giải để sinh viên tự kiểm chứng (human-in-the-loop) thay vì tin tưởng AI 100%.
