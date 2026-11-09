@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: 6PACKS
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Tạo bộ câu hỏi ôn tập bám sát tài liệu
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -18,18 +18,19 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 |2A202603605_NguyenHaAnh |Chỉnh sửa CV nhanh chóng để khớp với JD |Ứng viên xin việc |Bước chỉnh sửa thủ công |Tại sao không dùng chatbot có sẵn mà lại phải dùng sản phẩm này, sản phẩm có gì khác biệt ? (2A202603644_NguyenDucTrong) |
+| 2 |2A202603605_NguyenHaAnh |Lưu kết quả và tham số tự động khi chạy thực nghiệm ML |Sinh viên nghiên cứu, kỹ sư ML |Khi copy/paste vào sheets |"Nếu giải pháp là đơn giản ghi log ra file CSV, có thực sự giải quyết được bài toán so sánh nhiều mô hình cùng lúc, hay chỉ chuyển khó khăn từ việc 'copy-paste' sang việc 'đọc hiểu một file CSV khổng lồ'?" (2A202603617_TranXuanTruong) |
+| 3 |2A202603617_TranXuanTruong |Viết Release note cho các pull request/commit |developer/techlead phụ trách release hàng tuần |Tốn 15–20 phút diễn giải từ commit/PR kỹ thuật thô sang ngôn ngữ nghiệp vụ dễ hiểu. | "GitHub đã có sẵn nút auto-generate release notes từ tên PR, tại sao vẫn cần công cụ riêng?"(2A202603605_NguyenHaAnh)|
+| 4 |2A202603617_TranXuanTruong |Khi kết thúc họp tuần, tôi muốn ghi lại quyết định và action items kèm người phụ trách để nhóm bám sát tiến độ.|Trưởng nhóm, thành viên nhóm.|Tốn 25–30 phút nghe lại/rà soát ghi chú để trích xuất đúng người - đúng việc và gửi Slack.|"Các bot họp như Otter, Fireflies hay Teams Copilot đều có tính năng này, bài toán này có còn chỗ trống không?"(2A202603630_NgoVanTuan)|
+| 5 |2A202603630_NgoVanTuan |Đối chiếu và kiểm tra các deadline cần thực hiện khi có nhiều công việc chồng chéo |Sinh viên có nhiều môn và tham gia làm bài nhóm. |tìm và đối chiếu deadline trong các nguồn.|"Vấn đề nằm ở việc thiếu công cụ hay tính chủ động khi đã có gg calendar hay notion hỗ trợ ?"(2A202603617_TranXuanTruong)|
+| 6 |2A202603630_NgoVanTuan |Tìm và xác định chính xác kiến thức cần ôn tập từ nhiều nguồn tài liệu rải rác.|Sinh viên học nhiều môn hoặc cần ôn tập từ nhiều tài liệu.|tìm nguồn và quyết định ý nào liên quan/trùng lặp.| "Do khả năng sắp xếp tài liệu, lộ trình ôn tập chưa tốt hay thực sự chương trình dạy có thứ tự không hợp lý ?"(2A202603636_HoangDangKien) |
+| 7 |2A202603636_HoangDangKien |Tạo câu hỏi trắc nghiệm từ tài liệu ôn tập có sẵn |Sinh viên đại học đang trong giai đoạn ôn thi.|Tìm kiếm và lọc tài liệu.|"Làm sao để đảm bảo chất lượng câu hỏi AI tạo ra ?" (2A202603630_NgoVanTuan)|
+| 8 |2A202603636_HoangDangKien |Xây dựng bài test dựa trên slide bài giảng |Sinh viên đến sát ngày thi mới ôn, thiếu thời gian ôn tập.|Đọc thụ động tốn quá nhiều thời gian nhưng độ lưu giữ thông tin cực thấp.|"Làm sao để AI biết nội dung nào cần ôn trong giai đoạn nước rút?" (2A202603641_NguyenSyHuyKien) |
+| 9 |2A202603641_NguyenSyHuyKien |Khi viết tổng quan nghiên cứu, tôi muốn biết nhanh bài nào thực sự dùng được để ưu tiên đọc kỹ, thay vì đọc hết.|Sinh viên năm cuối làm đồ án tốt nghiệp |đọc abstract sàng lọc ,đọc sâu|"Vấn đề đọc có thể sử dụng AI, bottleneck thực sự nằm ở việc tìm kiếm tài liệu ?"(2A202603636_HoangDangKien) |
+| 10 |2A202603641_NguyenSyHuyKien |Khi có nhiều tài liệu tham khảo, tôi muốn trích dẫn tự động đúng chuẩn để không phải chỉnh từng dòng bằng tay.|Sinh viên làm đồ án, báo cáo.|gõ tay theo chuẩn ,sửa khi bị góp ý |"Nếu nhiều phần trích dẫn có nội dung tương đồng thì sẽ xử lý thế nào ? " (2A202603644_NguyenDucTrong)|
+| 11 |2A202603644_NguyenDucTrong|Khi có bảng dữ liệu mới về,muốn có bộ test chất lượng chạy được ngay, để lỗi dữ liệu không lọt vào báo cáo. |Data/analytics engineer |Bước khảo sát dữ liệu và viết test dbt thủ công cho từng bảng, từng cột|"Great Expectations đã sinh test tự động, sao tool hiểu được nghiệp vụ bảng dữ liệu?" (2A202603641_NguyenSyHuyKien)|
+| 12 |2A202603644_NguyenDucTrong |Khi chuẩn bị buổi dạy kèm Toán, muốn có bài tập đúng điểm yếu của học sinh và biết lỗi sai nào lặp lại, để buổi học tập trung đúng chỗ. |Gia sư, học sinh(học tại nhà) |Tìm và chọn bài đúng điểm yếu và tổng hợp lỗi sai lặp lại
+LLM thỉnh thoảng giải/ra đề Toán sai, làm sao bảo đảm đề đúng?|"Thu thập dữ liệu nháp của học sinh bằng cách nào để AI biết đúng lỗi sai?" (2A202603605_NguyenHaAnh) |
 
 ### 2.2. Cluster
 
