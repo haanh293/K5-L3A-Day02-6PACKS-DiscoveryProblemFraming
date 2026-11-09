@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: 6PACKS
-- Candidate problem nhóm chọn (1 câu):
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Tạo bộ câu hỏi ôn tập bám sát tài liệu
+- Quyết định cuối (Go / Not Yet / No-Go): Not Yet
 
 ## Thành viên
 
